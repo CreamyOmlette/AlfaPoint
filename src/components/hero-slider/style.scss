@@ -1,0 +1,66 @@
+@use "../../index.scss";
+.slide-bg {
+  height: 100vh;
+  background-color: gray;
+}
+
+.hero {
+  position: relative;
+  top: 33%;
+  left: 24%;
+  .question {
+    padding-top: 36.6px;
+    padding-left: 44.23px;
+    width: 263.31px;
+    height: 92.91px;
+    background-image: url("../../img/dialogue.svg");
+    background-repeat: no-repeat;
+  }
+  .heading {
+    margin-bottom: 44px;
+  }
+  .undertext {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 44px;
+    font-weight: bold;
+  }
+  .know-us-btn {
+    display: inline-block;
+    font-size: 20px;
+    background-color: index.$accent-1;
+    padding: 25px 69px 25px 69px;
+    border-radius: 15px;
+  }
+}
+
+@media (max-width: index.$breakpoint-md) {
+  .hero {
+    left: 25px;
+  }
+}
+
+.slideR-wrapper {
+  :global(.swiper-pagination-bullet) {
+    background: white;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.5rem;
+    opacity: 1;
+  }
+
+  :global(.swiper-pagination-bullet-active) {
+    background-color: white;
+    width: 5rem;
+    height: 1rem;
+    border-radius: 0.5rem;
+  }
+}
+
+#root
+  > div
+  > div.swiper.swiper-initialized.swiper-horizontal.swiper-pointer-events
+  > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal.swiper-pagination-bullets-dynamic
+  > span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-bullet-active-main {
+  background-color: white;
+}

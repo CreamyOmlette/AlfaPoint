@@ -1,0 +1,214 @@
+@use "../../index.scss";
+
+.container-nav {
+  margin-left: 0px;
+  margin-right: 25px;
+  height: 100%;
+}
+
+.logo {
+  &-scroll {
+    background-image: url("../../img/logo-alfa-rect-04.svg");
+    height: 60px;
+    background-position: left;
+    padding: 0px;
+  }
+  background-image: url("../../img/logo-nobg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 136.77px;
+  height: 33.16px;
+  padding-left: 22.16px;
+  padding-top: 23.77px;
+  padding-bottom: 23.77px;
+  background-origin: content-box;
+  height: calc(100% - 47.24px);
+}
+.navbar {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  &-scroll {
+    height: 60px;
+    background-color: white;
+  }
+  height: 107.54px;
+  background-color: transparent;
+  transition: background 0.3s ease, height 0.3s ease;
+  z-index: 10;
+}
+
+.center {
+  align-content: center;
+}
+
+.nav {
+  &.nav-scroll > a {
+    color: #3f3f3f;
+  }
+  a {
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 60px;
+    color: index.$nav-color;
+    position: relative;
+    z-index: 15;
+  }
+
+  @keyframes fadeinleft {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 140%;
+    }
+  }
+
+  a:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    top: 125%;
+    left: -20%;
+    transform: translateY(-125%);
+    height: 2px;
+    background-color: index.$accent-1;
+    z-index: 12;
+  }
+
+  a:not(:last-child):hover::before {
+    animation: fadeinleft 0.3s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  .contact {
+    padding: 6px 18px 6px 18px;
+    border: 2px solid index.$accent-1;
+    border-radius: 7px;
+    color: index.$nav-color;
+  }
+
+  .contact:hover {
+    background-color: index.$accent-1;
+    color: black;
+  }
+}
+
+.burger {
+  &.burger-scroll {
+    .line {
+      background: #3f3f3f;
+    }
+  }
+  position: absolute;
+  left: 25px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  .line {
+    height: 2px;
+    background: #fff;
+    width: 100%;
+    transition: transform 0.3s ease;
+    &-scroll {
+      background: #3f3f3f;
+    }
+  }
+}
+
+@media (max-width: index.$breakpoint-md) {
+  .logo {
+    position: absolute;
+    right: 25px;
+    &-scroll {
+      right: 0px;
+    }
+  }
+  .container-nav {
+    margin-left: 25px;
+    margin-right: 0px;
+    height: 100%;
+  }
+}
+
+.nav-menu {
+  box-shadow: 0px 0 1px 0 #d2d2d2;
+  z-index: 100;
+  ul {
+    margin-top: 60px;
+    &.scroll {
+      margin-top: 40px;
+    }
+    li {
+      margin-top: 30px;
+      margin-left: 25px;
+      a {
+        color: #3f3f3f;
+      }
+    }
+  }
+  &-active {
+    left: 0;
+  }
+  display: block;
+  position: fixed;
+  height: 100vh;
+  width: 280px;
+  left: -280px;
+  transition: left ease-in-out 0.2s;
+  background-color: #fff;
+}
+
+.contact-menu {
+  &-scroll {
+    margin-top: 12.5px;
+  }
+  margin-top: 36px;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 30px;
+
+  &-btn {
+    padding: 6px 18px 6px 18px;
+    border: 2px solid index.$accent-1;
+    border-radius: 7px;
+    background-color: index.$accent-1;
+    a {
+      color: #3f3f3f;
+    }
+  }
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-menu-close {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  left: 8.5px;
+  top: 40px;
+  &-scroll {
+    top: 16px;
+  }
+  .line {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #3f3f3f;
+  }
+  #top-line {
+    top: 0px;
+    transform: rotate(135deg) translateY(-19px);
+  }
+  #bottom-line {
+    top: 27px;
+    transform: rotate(-135deg) translateY(19px);
+  }
+}

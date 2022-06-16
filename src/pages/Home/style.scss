@@ -1,0 +1,26 @@
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url("../../img/bg-slider.jpeg") no-repeat 50% 50% / cover;
+  z-index: -2;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0, 0, 0, 0.5);
+  z-index: -1;
+}
+.slider {
+  height: 200vh;
+  width: 100vw;
+  background-color: grey;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
