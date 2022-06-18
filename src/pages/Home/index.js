@@ -1,6 +1,7 @@
 import "./style.scss";
 import { HeroSlider } from "../../components/hero-slider";
 import { IconSlider } from "../../components/icon-slider";
+import { ServicesSlider } from "../../components/services-slider";
 
 export function Home() {
   return (
@@ -21,7 +22,11 @@ export function Home() {
             </p>
           </div>
         </div>
-        <div className="who-we-are-bg">smth</div>
+        <div className="who-we-are-bg loading"></div>
+      </div>
+      <div className="what-we-do">
+        <h2>What we do</h2>
+        <ServicesSlider></ServicesSlider>
       </div>
     </>
   );

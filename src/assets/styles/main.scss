@@ -1,5 +1,16 @@
 @import "_variables.scss";
 
+.loading {
+  animation: loading 1s linear infinite alternate;
+  @keyframes loading {
+    0% {
+      background-color: #dcdcdc;
+    }
+    100% {
+      background-color: #d9d9d963;
+    }
+  }
+}
 .flex {
   display: flex;
 }

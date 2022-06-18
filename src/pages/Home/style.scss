@@ -50,10 +50,13 @@
     width: 50%;
     height: 100%;
     background-image: url("../../assets/img/who-we-are.png");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 @media (max-width: $breakpoint-md) {
   .who-we-are {
+    height: 115vh;
     .content {
       width: 100%;
       margin: 0;
@@ -70,5 +73,13 @@
       height: 80vh;
       width: 100%;
     }
+  }
+}
+
+.what-we-do {
+  background-color: #2f2f2f;
+  h2 {
+    padding-top: 105px;
+    text-align: center;
   }
 }

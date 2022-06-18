@@ -21,15 +21,14 @@ export function IconSlider() {
         width: window.innerWidth,
         height: window.innerHeight,
       });
-
-      if (windowDimension.width <= sm) {
-        setSlidesPerView(2);
-      } else if (windowDimension.width <= mid) {
-        setSlidesPerView(3);
-      } else if (windowDimension.width <= lg) {
-        setSlidesPerView(4);
-      }
     };
+    if (windowDimension.width <= sm) {
+      setSlidesPerView(2);
+    } else if (windowDimension.width <= mid) {
+      setSlidesPerView(3);
+    } else if (windowDimension.width <= lg) {
+      setSlidesPerView(4);
+    }
     window.addEventListener("resize", detectSize);
 
     return () => {
