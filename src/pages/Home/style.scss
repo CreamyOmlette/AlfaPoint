@@ -1,3 +1,5 @@
+@import "../../assets/styles/_variables";
+
 .bg-image {
   position: absolute;
   top: 0;
@@ -23,4 +25,50 @@
   position: absolute;
   top: 0;
   z-index: -1;
+}
+
+.who-we-are {
+  height: 75vh;
+  display: flex;
+  .content {
+    width: 50%;
+    background-color: #f9f9f9;
+    .content-box {
+      margin-top: calc(75vh * 0.35);
+      margin-bottom: calc(75vh * 0.35);
+      margin-left: 25px;
+      margin-right: 25px;
+      h2 {
+        color: black;
+      }
+      p {
+        text-align: justify;
+      }
+    }
+  }
+  &-bg {
+    width: 50%;
+    height: 100%;
+    background-image: url("../../assets/img/who-we-are.png");
+  }
+}
+@media (max-width: $breakpoint-md) {
+  .who-we-are {
+    .content {
+      width: 100%;
+      margin: 0;
+      .content-box {
+        margin: 0;
+        margin-right: 25px;
+        margin-left: 25px;
+        padding-top: 75px;
+        padding-bottom: 75px;
+      }
+    }
+    display: block;
+    &-bg {
+      height: 80vh;
+      width: 100%;
+    }
+  }
 }
