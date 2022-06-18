@@ -34,7 +34,9 @@ export function IconSlider() {
           <SwiperSlide>
             <div className="slide-wrapper">
               <div className={`icon-${element}`}></div>
-              <div className="slide-title">{element[0].toUpperCase()+element.slice(1)}</div>
+              <div className="slide-title">
+                {element[0].toUpperCase() + element.slice(1)}
+              </div>
             </div>
             <div className="separator"></div>
           </SwiperSlide>

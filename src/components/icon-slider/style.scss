@@ -1,3 +1,9 @@
 .icon {
-
+  width: 65px;
+  height: 65px;
+  background-position: center;
+  background-repeat: no-repeat;
+  &-angular {
+    background-image: url("../../assets/icons/angular.svg");
+  }
 }

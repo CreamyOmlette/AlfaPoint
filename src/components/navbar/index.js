@@ -68,13 +68,14 @@ export function Navbar() {
           </div>
         </div>
         <ul>
+          <div className="separator"></div>
           <li>
             <Link>
               <h2>about us</h2>
             </Link>
           </li>
           <div className="separator"></div>
-          <li> 
+          <li>
             <Link>
               <h2>services</h2>
             </Link>
@@ -85,6 +86,7 @@ export function Navbar() {
               <h2>careers</h2>
             </Link>
           </li>
+          <div className="separator"></div>
         </ul>
       </div>
     </nav>

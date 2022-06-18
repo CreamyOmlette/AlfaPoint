@@ -9,6 +9,7 @@
 
 .hero {
   position: relative;
+  z-index: 5;
   top: 20%;
   left: 22%;
   .question {
@@ -38,8 +39,11 @@
   }
   .undertext {
     color: black;
-    font-size: 18px;
-    padding-right: 25px;
+    p {
+      font-size: 18px;
+      display: inline-block;
+      padding-right: 25px;
+    }
     margin-bottom: 44px;
   }
   .know-us-btn {

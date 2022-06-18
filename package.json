@@ -37,8 +37,6 @@
     ]
   },
   "devDependencies": {
-    "@splidejs/react-splide": "^0.7.8",
-    "react-icons": "^4.4.0",
     "sass": "^1.52.3",
     "swiper": "^8.2.4"
   }

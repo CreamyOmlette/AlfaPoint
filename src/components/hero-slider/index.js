@@ -31,7 +31,7 @@ export function HeroSlider() {
                 </h1>
               </div>
               <div className="undertext">
-                Enrich your team's skillset in a blink of an eye
+                <p>Enrich your team's skillset in a blink of an eye</p>
               </div>
               <div className="know-us-btn">GET TO KNOW US</div>
             </div>
