@@ -69,13 +69,21 @@ export function Navbar() {
         </div>
         <ul>
           <li>
-            <Link>about us</Link>
+            <Link>
+              <h2>about us</h2>
+            </Link>
           </li>
-          <li>
-            <Link>services</Link>
+          <div className="separator"></div>
+          <li> 
+            <Link>
+              <h2>services</h2>
+            </Link>
           </li>
+          <div className="separator"></div>
           <li>
-            <Link>careers</Link>
+            <Link>
+              <h2>careers</h2>
+            </Link>
           </li>
         </ul>
       </div>

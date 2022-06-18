@@ -1,39 +1,57 @@
-@use "../../index.scss";
+@import "../../assets/styles/_variables.scss";
+
 .slide-bg {
   height: 100vh;
-  background-color: index.$main-color;
+  background-image: url("../../assets/img/slide-bg.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .hero {
   position: relative;
-  top: 33%;
-  left: 24%;
+  top: 20%;
+  left: 22%;
   .question {
-    padding-top: 36.6px;
-    padding-left: 44.23px;
-    width: 263.31px;
-    height: 92.91px;
-    background-image: url("../../img/dialogue.svg");
-    background-repeat: no-repeat;
+    display: flex;
+    margin-bottom: 61px;
+    .question-logo {
+      width: 80px;
+      height: 123px;
+      background-image: url("../../assets/icons/logo-message.svg");
+      background-repeat: no-repeat;
+      background-position: left bottom;
+    }
+    .question-message {
+      padding-top: 36.6px;
+      padding-left: 44.23px;
+      width: 263.31px;
+      background-image: url("../../assets/icons/dialogue.svg");
+      background-repeat: no-repeat;
+    }
   }
   .heading {
     margin-bottom: 44px;
+    h1 {
+      display: inline-block;
+      margin-right: 25px;
+    }
   }
   .undertext {
-    color: white;
-    font-size: 24px;
+    color: black;
+    font-size: 18px;
+    padding-right: 25px;
     margin-bottom: 44px;
   }
   .know-us-btn {
     display: inline-block;
     font-size: 20px;
-    background-color: index.$accent-1;
+    background-color: $accent-1;
     padding: 25px 69px 25px 69px;
     border-radius: 15px;
   }
 }
 
-@media (max-width: index.$breakpoint-md) {
+@media (max-width: $breakpoint-md) {
   .hero {
     left: 25px;
   }

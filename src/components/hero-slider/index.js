@@ -1,8 +1,5 @@
-import { Link } from "react-router-dom";
-import { useState } from "react";
-import { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, A11y, Autoplay } from "swiper";
+import { Pagination, A11y, Autoplay } from "swiper";
 import "./style.scss";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -24,7 +21,10 @@ export function HeroSlider() {
         <SwiperSlide>
           <div className="slide-bg get-to-know">
             <div className="hero">
-              <div className="question">What do we do?</div>{" "}
+              <div className="question">
+                <div className="question-logo"></div>
+                <div className="question-message">What do we do?</div>
+              </div>
               <div className="heading">
                 <h1>
                   We help companies <br /> in outstaffing their IT operations

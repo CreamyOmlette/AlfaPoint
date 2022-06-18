@@ -13,10 +13,9 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test"
   },
   "eslintConfig": {
     "extends": [
@@ -38,6 +37,7 @@
   },
   "devDependencies": {
     "@splidejs/react-splide": "^0.7.8",
+    "react-icons": "^4.4.0",
     "sass": "^1.52.3",
     "swiper": "^8.2.4"
   }

@@ -1,4 +1,4 @@
-@use "../../index.scss";
+@import "../../assets/styles/_variables.scss";
 
 .container-nav {
   margin-left: 0px;
@@ -8,12 +8,12 @@
 
 .logo {
   &-scroll {
-    background-image: url("../../img/logo-alfa-rect-04.svg");
+    background-image: url("../../assets/icons/logo-alfa-rect-04.svg");
     height: 60px;
     background-position: left;
     padding: 0px;
   }
-  background-image: url("../../img/logo-nobg.svg");
+  background-image: url("../../assets/icons/logo-nobg.svg");
   background-repeat: no-repeat;
   background-position: center;
   width: 136.77px;
@@ -31,7 +31,6 @@
   &-scroll {
     height: 60px;
     background-color: white;
-    box-shadow: 0px 0 6px 0 #696969;
   }
   height: 107.54px;
   background-color: transparent;
@@ -50,7 +49,7 @@
   a {
     font-size: 15px;
     margin-left: 60px;
-    color: index.$nav-color;
+    color: $nav-color;
     position: relative;
     z-index: 15;
   }
@@ -71,7 +70,7 @@
     left: -20%;
     transform: translateY(-125%);
     height: 2px;
-    background-color: index.$accent-1;
+    background-color: $accent-1;
     z-index: 12;
   }
 
@@ -82,13 +81,13 @@
 
   .contact {
     padding: 6px 18px 6px 18px;
-    border: 2px solid index.$accent-1;
+    border: 2px solid $accent-1;
     border-radius: 7px;
-    color: index.$nav-color;
+    color: $nav-color;
   }
 
   .contact:hover {
-    background-color: index.$accent-1;
+    background-color: $accent-1;
     color: black;
   }
 }
@@ -119,7 +118,7 @@
   }
 }
 
-@media (max-width: index.$breakpoint-md) {
+@media (max-width: $breakpoint-md) {
   .logo {
     position: absolute;
     right: 25px;
@@ -135,18 +134,27 @@
 }
 
 .nav-menu {
-  box-shadow: 0px 0 6px 0 #909090;
   z-index: 100;
   ul {
-    margin-top: 60px;
+    .separator {
+      margin-left: 25px;
+      width: 17%;
+      height: 1px;
+      opacity: 0.5;
+      background-color: #3f3f3f;
+    }
+    margin-top: 30px;
     &.scroll {
       margin-top: 40px;
     }
     li {
-      margin-top: 30px;
       margin-left: 25px;
-      a {
+
+      h2 {
+        padding-top: 30px;
+        padding-bottom: 30px;
         color: #3f3f3f;
+        font-weight: 400px;
       }
     }
   }
@@ -156,8 +164,8 @@
   display: block;
   position: fixed;
   height: 100vh;
-  width: 280px;
-  left: -280px;
+  width: 100vw;
+  left: -100vw;
   transition: left ease-in-out 0.2s;
   background-color: #fff;
 }
@@ -173,9 +181,9 @@
 
   &-btn {
     padding: 6px 18px 6px 18px;
-    border: 2px solid index.$accent-1;
+    border: 2px solid $accent-1;
     border-radius: 7px;
-    background-color: index.$accent-1;
+    background-color: $accent-1;
     a {
       color: #3f3f3f;
     }
