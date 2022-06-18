@@ -1,9 +1,28 @@
 .icon {
   width: 65px;
   height: 65px;
+  // margin-top: 36px;
+  margin-left: auto;
+  margin-right: auto;
   background-position: center;
   background-repeat: no-repeat;
+  background-origin: content-box;
   &-angular {
     background-image: url("../../assets/icons/angular.svg");
   }
+}
+.slide-title {
+  margin-top: 15px;
+  text-align: center;
+  color: #a0a0a0;
+}
+
+.slide-wrapper {
+  height: calc(175px - 36px);
+  padding-top: 36px;
+  border-right: solid 0.01px #f1f1f1;
+}
+
+.slider-wrapper {
+  background-color: white;
 }

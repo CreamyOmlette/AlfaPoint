@@ -38,7 +38,6 @@ export function HeroSlider() {
           </div>
         </SwiperSlide>
       </Swiper>
-      <div className="lorem"></div>
     </div>
   );
 }
