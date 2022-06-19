@@ -4,7 +4,7 @@
   padding-bottom: 93px;
 }
 #root > div.what-we-do > div > div {
-  padding-top: 50px;
+  padding-top: calc(4rem - 36px);
 }
 .what-we-do-slide {
   &-wrapper {
@@ -16,7 +16,11 @@
         background-color: $main-color;
         border-color: $main-color;
         .what-we-do-slide-image-container {
-          background-color: #fff;
+          background-color: transparent;
+          &-1 {
+            mask: none;
+            background-image: url("../../assets/icons/services/2-hover.svg");
+          }
         }
       }
       .what-we-do-slide-title {
