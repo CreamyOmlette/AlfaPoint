@@ -12,25 +12,10 @@
     padding-top: 36px;
     &:hover {
       .what-we-do-slide-image {
-        animation: elevate-image 0.5s ease-in-out forwards;
+        transform: translateY(-40px);
       }
       .what-we-do-slide-title {
-      }
-      @keyframes elevate-image {
-        0% {
-          top: 15px;
-        }
-        100% {
-          top: -25px;
-        }
-      }
-      @keyframes elevate-title {
-        0% {
-          top: 15px;
-        }
-        100% {
-          top: -15px;
-        }
+        transform: translateY(-55px);
       }
     }
   }
@@ -38,17 +23,18 @@
     position: absolute;
     height: 200px;
     width: 200px;
-    top: 15px;
+    // top: 15px;
     transform: translateY(15px);
+    transition: all 0.5s ease-in-out;
     left: calc((100% - 200px) * 0.5);
     right: calc((100% - 200px) * 0.5);
   }
   &-title {
     position: absolute;
-    margin-top: 15px;
+    transition: all 0.5s ease-in-out;
     text-align: center;
     color: #fff;
-    bottom: 40px;
+    top: 280px;
     left: calc((100% - 200px) * 0.5);
     right: calc((100% - 200px) * 0.5);
   }

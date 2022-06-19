@@ -8,7 +8,49 @@
   background-repeat: no-repeat;
   background-origin: content-box;
   &-angular {
-    background-image: url("../../assets/icons/angular.svg");
+    background-image: url("../../assets/icons/tech/angular.svg");
+  }
+  &-vue {
+    background-image: url("../../assets/icons/tech/vue.svg");
+  }
+  &-react {
+    background-image: url("../../assets/icons/tech/react.svg");
+  }
+  &-golang {
+    background-image: url("../../assets/icons/tech/golang.svg");
+  }
+  &-symfony {
+    background-image: url("../../assets/icons/tech/symfony.svg");
+  }
+  &-laravel {
+    background-image: url("../../assets/icons/tech/laravel.svg");
+  }
+  &-node {
+    background-image: url("../../assets/icons/tech/node.svg");
+  }
+  &-kubernetes {
+    background-image: url("../../assets/icons/tech/kubernetes.svg");
+  }
+  &-bitbucket {
+    background-image: url("../../assets/icons/tech/bitbucket.svg");
+  }
+  // &-python {
+  //   background-image: url("../../assets/icons/tech/python.svg");
+  // }
+  &-java {
+    background-image: url("../../assets/icons/tech/java.svg");
+  }
+  &-php {
+    background-image: url("../../assets/icons/tech/php.svg");
+  }
+  &-aws {
+    background-image: url("../../assets/icons/tech/aws.svg");
+  }
+  &-node {
+    background-image: url("../../assets/icons/tech/node.svg");
+  }
+  &-digitalOcean {
+    background-image: url("../../assets/icons/tech/digital-Ocean.svg");
   }
 }
 .slide-title {

@@ -38,13 +38,16 @@ export function IconSlider() {
   const technologies = [
     "angular",
     "react",
-    "python",
     "kubernetes",
     "aws",
     "java",
     "laravel",
-    "symphony",
+    "symfony",
     "golang",
+    "php",
+    "bitbucket",
+    "vue",
+    "digitalOcean",
   ];
   return (
     <div className="slider-wrapper">
@@ -62,7 +65,7 @@ export function IconSlider() {
           return (
             <SwiperSlide key={element}>
               <div className="slide-wrapper">
-                <div className={`icon icon-angular`}></div>
+                <div className={`icon icon-${element}`}></div>
                 <div className="slide-title">
                   {element[0].toUpperCase() + element.slice(1)}
                 </div>
