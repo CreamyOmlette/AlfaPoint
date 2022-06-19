@@ -1,7 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Autoplay } from "swiper";
 import { useState, useEffect } from "react";
-import service1 from "../../assets/img/outsourcing.png";
+import service1 from "../../assets/icons/services/1.svg";
+import service2 from "../../assets/icons/services/2.svg";
+import service3 from "../../assets/icons/services/3.svg";
+import service4 from "../../assets/icons/services/4.svg";
 import "./style.scss";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -19,28 +22,18 @@ export function ServicesSlider() {
       link: "test",
     },
     {
-      image: service1,
+      image: service2,
       title: "Web and mobile development",
       link: "test",
     },
     {
-      image: service1,
+      image: service3,
       title: "Digital products & Engineering",
       link: "test",
     },
     {
-      image: service1,
+      image: service4,
       title: "Web & eCommerce",
-      link: "test",
-    },
-    {
-      image: service1,
-      title: "Digital products & Engineering1",
-      link: "test",
-    },
-    {
-      image: service1,
-      title: "Web & eCommerce1",
       link: "test",
     },
   ];
@@ -79,12 +72,14 @@ export function ServicesSlider() {
           disableOnInteraction: false,
         }}
       >
-        {services.map((service) => {
+        {services.map((service, index) => {
           return (
             <SwiperSlide key={service.title}>
               <div className="what-we-do-slide-wrapper">
-                <div className="what-we-do-slide-image loading">
-                  <img src={service.image} alt=""></img>
+                <div className="what-we-do-slide-image">
+                  <div
+                    className={`what-we-do-slide-image-container what-we-do-slide-image-container-${index}`}
+                  ></div>
                 </div>
                 <div className="what-we-do-slide-title">{service.title}</div>
               </div>

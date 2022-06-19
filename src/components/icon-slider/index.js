@@ -13,7 +13,7 @@ export function IconSlider() {
     width: window.innerWidth,
     height: window.innerHeight,
   });
-  const [slidesPerView, setSlidesPerView] = useState(6);
+  const [slidesPerView, setSlidesPerView] = useState(8);
 
   useEffect(() => {
     const detectSize = () => {

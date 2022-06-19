@@ -13,6 +13,11 @@
     &:hover {
       .what-we-do-slide-image {
         transform: translateY(-40px);
+        background-color: $main-color;
+        border-color: $main-color;
+        .what-we-do-slide-image-container {
+          background-color: #fff;
+        }
       }
       .what-we-do-slide-title {
         transform: translateY(-55px);
@@ -20,20 +25,46 @@
     }
   }
   &-image {
+    background-color: #fff;
+    border: 1px solid #2a2a2a3f;
     position: absolute;
     height: 200px;
     width: 200px;
     // top: 15px;
     transform: translateY(15px);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.25s ease-in-out;
     left: calc((100% - 200px) * 0.5);
     right: calc((100% - 200px) * 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-container {
+      width: 130px;
+      height: 130px;
+      background-color: #2a2a2a;
+      &-0 {
+        mask: url("../../assets/icons/services/1.svg") no-repeat center /
+          contain;
+      }
+      &-1 {
+        mask: url("../../assets/icons/services/2.svg") no-repeat center /
+          contain;
+      }
+      &-2 {
+        mask: url("../../assets/icons/services/3.svg") no-repeat center /
+          contain;
+      }
+      &-3 {
+        mask: url("../../assets/icons/services/4.svg") no-repeat center /
+          contain;
+      }
+    }
   }
   &-title {
     position: absolute;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.25s ease-in-out;
     text-align: center;
-    color: #fff;
+    color: #2a2a2a;
     top: 280px;
     left: calc((100% - 200px) * 0.5);
     right: calc((100% - 200px) * 0.5);
@@ -42,10 +73,6 @@
 
 @media (max-width: $breakpoint-md) {
   .what-we-do-slide-image {
-    img {
-      height: 175px;
-      width: 175px;
-    }
     height: 175px;
     width: 175px;
     left: calc((100% - 175px) * 0.5);
