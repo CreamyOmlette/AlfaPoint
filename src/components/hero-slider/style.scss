@@ -61,6 +61,13 @@
   }
 }
 
+@media (max-width: $breakpoint-sm) {
+  .hero > .heading > h1 {
+    width: calc(100vw - 50px);
+    box-sizing: border-box;
+  }
+}
+
 .slideR-wrapper {
   :global(.swiper-pagination-bullet) {
     background: white;

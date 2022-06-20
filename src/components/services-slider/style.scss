@@ -13,13 +13,25 @@
     &:hover {
       .what-we-do-slide-image {
         transform: translateY(-40px);
-        background-color: $main-color;
-        border-color: $main-color;
+        background-color: #3d8cff;
+        border-color: #3d8cff;
         .what-we-do-slide-image-container {
           background-color: transparent;
+          &-0 {
+            mask: none;
+            background-image: url("../../assets/icons/services/1-hover.svg");
+          }
           &-1 {
             mask: none;
             background-image: url("../../assets/icons/services/2-hover.svg");
+          }
+          &-2 {
+            mask: none;
+            background-image: url("../../assets/icons/services/3-hover.svg");
+          }
+          &-3 {
+            mask: none;
+            background-image: url("../../assets/icons/services/4-hover.svg");
           }
         }
       }

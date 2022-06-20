@@ -1,3 +1,5 @@
+@import "../../assets/styles/_variables.scss";
+
 .icon {
   width: 65px;
   height: 65px;
@@ -63,8 +65,23 @@
   height: calc(175px - 36px);
   padding-top: 36px;
   border-right: solid 0.01px #d2d2d2;
+  border-bottom: solid 0.01px #d2d2d2;
 }
 
 .slider-wrapper {
   background-color: white;
+}
+
+.icon-slider > .swiper-wrapper {
+  height: 175px;
+}
+
+@media (max-width: $breakpoint-md) {
+  .icon-slider > .swiper-wrapper {
+    height: 330px;
+  }
+}
+
+.icon-slide {
+  height: calc((100% - 30px) / 2) !important;
 }

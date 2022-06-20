@@ -16,20 +16,31 @@
 	.st10{fill:none;stroke:#000000;stroke-width:9;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 	.st11{fill:none;stroke:#000000;stroke-width:11;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 	.st12{fill:#020202;}
-	.st13{fill:#FCEE21;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-	.st14{fill:#73ACFF;stroke:#000000;stroke-width:10;stroke-miterlimit:10;}
-	.st15{fill:#FFFFFF;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-	.st16{fill:none;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st13{fill:none;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st14{fill:#FCEE21;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st15{fill:#73ACFF;stroke:#000000;stroke-width:10;stroke-miterlimit:10;}
+	.st16{fill:#FFFFFF;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st17{fill:#FCEE21;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st18{fill:#CC9A0D;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st19{fill:#3F8FEF;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st20{fill:#999999;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st21{fill:#E6E6E6;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st22{fill:#FFFFFF;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st23{fill:#D8C51D;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st24{fill:#195091;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st25{fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 </style>
 <g>
-	<polygon class="st16" points="721.32,370.8 544.59,370.8 453.01,523.81 629.74,523.81 	"/>
-	<polygon class="st16" points="894.31,681.65 721.32,370.8 629.74,523.81 802.74,834.66 	"/>
-	<polygon class="st16" points="361.43,676.81 453.01,523.81 97.26,525.1 5.69,678.11 	"/>
-	<polyline class="st16" points="550.68,65.34 635.83,218.35 544.59,370.8 453.01,523.81 367.86,370.8 550.68,65.34 	"/>
-	<polyline class="st16" points="191.13,370.8 276.64,524.45 453.01,523.81 367.86,370.8 191.13,370.8 	"/>
-	<polygon class="st16" points="191.13,370.8 373.95,65.34 550.68,65.34 367.86,370.8 	"/>
-	<polyline class="st16" points="453.01,523.81 626.01,834.66 453.01,523.81 629.74,523.81 802.74,834.66 626.01,834.66 	"/>
-	<polygon class="st16" points="453.01,523.81 361.43,676.81 446.58,829.82 90.84,831.12 5.69,678.11 361.43,676.81 446.58,829.82 
-		538.16,676.81 	"/>
+	<g>
+		<polygon class="st25" points="717.46,371.92 543.24,371.92 452.97,522.76 627.18,522.76 		"/>
+		<polygon class="st25" points="888,678.36 717.46,371.92 627.18,522.76 797.72,829.19 		"/>
+		<polygon class="st25" points="362.69,673.59 452.97,522.76 102.28,524.04 12,674.87 		"/>
+		<polyline class="st25" points="549.24,70.81 633.19,221.64 543.24,371.92 452.97,522.76 369.02,371.92 549.24,70.81 		"/>
+		<polyline class="st25" points="194.81,371.92 279.1,523.39 452.97,522.76 369.02,371.92 194.81,371.92 		"/>
+		<polygon class="st25" points="194.81,371.92 375.03,70.81 549.24,70.81 369.02,371.92 		"/>
+		<polyline class="st25" points="452.97,522.76 623.5,829.19 452.97,522.76 627.18,522.76 797.72,829.19 623.5,829.19 		"/>
+		<polygon class="st25" points="452.97,522.76 362.69,673.59 446.63,824.42 95.94,825.7 12,674.87 362.69,673.59 446.63,824.42 
+			536.91,673.59 		"/>
+	</g>
 </g>
 </svg>
