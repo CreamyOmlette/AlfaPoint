@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, A11y, Autoplay, Grid, Pagination, Brea } from "swiper";
-import { useSwiper } from "swiper/react";
+import { Navigation, A11y, Grid } from "swiper";
 import "./style.scss";
 import "swiper/scss";
 import "swiper/scss/grid";
