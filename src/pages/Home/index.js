@@ -2,6 +2,11 @@ import "./style.scss";
 import { HeroSlider } from "../../components/hero-slider";
 import { IconSlider } from "../../components/icon-slider";
 import { ServicesSlider } from "../../components/services-slider";
+import cvatid from "../../assets/img/clients/cvantid.png";
+import supraten from "../../assets/img/clients/supraten.png";
+import exfactor from "../../assets/img/clients/exfactor.png";
+import teleport from "../../assets/img/clients/teleport.png";
+import { ContactForm } from "../../components/contact-form";
 
 export function Home() {
   return (
@@ -48,7 +53,7 @@ export function Home() {
           <div className="featured-employees">
             <div className="employee">
               <div className="photo">
-                <a className="btn-linkedin" href="#">
+                <a className="btn-linkedin" href="/#">
                   linkedin
                 </a>
               </div>
@@ -57,7 +62,7 @@ export function Home() {
             </div>
             <div className="employee">
               <div className="photo">
-                <a className="btn-linkedin" href="#">
+                <a className="btn-linkedin" href="/#">
                   linkedin
                 </a>
               </div>
@@ -111,6 +116,18 @@ export function Home() {
           </div>
         </div>
       </div>
+      <div className="our-partners">
+        <div className="content-box">
+          <h2>Our clients and partners</h2>
+          <div className="clients">
+            <img src={cvatid} alt=""></img>
+            <img src={teleport} alt=""></img>
+            <img src={supraten} alt=""></img>
+            <img src={exfactor} alt=""></img>
+          </div>
+        </div>
+      </div>
+      <ContactForm></ContactForm>
     </>
   );
 }

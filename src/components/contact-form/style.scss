@@ -1,0 +1,110 @@
+@import "../../assets/styles/_variables.scss";
+.contact-section {
+  display: flex;
+  .form {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 70vw;
+    background-color: #3d8cff;
+    p {
+      margin-bottom: 40px;
+      color: white;
+      font-size: 16px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      input[type="text"] {
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.4);
+        }
+        &:focus {
+          outline: none;
+          border-bottom: rgba(255, 255, 255, 0.8) solid 1px;
+        }
+        background-color: #3d8cff;
+        margin-bottom: 20px;
+        border: none;
+        border-bottom: rgba(255, 255, 255, 0.5) solid 1px;
+        transition: all 0.2s ease-in-out;
+        color: rgba(255, 255, 255, 1);
+        line-height: 32px;
+      }
+      textarea {
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.4);
+          line-height: 32px;
+        }
+        &:focus {
+          outline: none;
+          border-bottom: rgba(255, 255, 255, 0.8) solid 1px;
+        }
+        font-family: inherit;
+        height: 180px;
+        margin-bottom: 25px;
+        background-color: #3d8cff;
+        margin-bottom: 20px;
+        border: none;
+        border-bottom: rgba(255, 255, 255, 0.5) solid 1px;
+        transition: all 0.2s ease-in-out;
+        color: rgba(255, 255, 255, 1);
+        line-height: 32px;
+        resize: none;
+      }
+    }
+    .btn-container {
+      display: flex;
+      place-content: flex-end;
+      .submit {
+        padding: 10px auto 10px auto;
+        line-height: 50px;
+        width: 180px;
+        background: linear-gradient(180deg, #ffce20 0%, #ffdb20 100%);
+        border-radius: 7px;
+        text-align: center;
+        color: black;
+      }
+    }
+  }
+  @media (min-width: $breakpoint-md) {
+    .locations {
+      margin-top: 50px;
+    }
+  }
+  .info {
+    width: 30vw;
+    padding: 50px 50px 50px 50px;
+    h2 {
+      color: black;
+    }
+    a {
+      text-decoration-line: underline;
+      color: #3d8cff;
+    }
+  }
+}
+@media (max-width: $breakpoint-md) {
+  .contact-section {
+    .form,
+    .info {
+      padding: 25px;
+    }
+  }
+}
+
+@media (max-width: calc($breakpoint-sm + 200px)) {
+  .contact-section {
+    display: block;
+    .form,
+    .info {
+      width: 100vw;
+    }
+
+    .info {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

@@ -162,7 +162,8 @@
     margin-bottom: 25px;
   }
   .our-team {
-    height: max-content;
+    min-height: max-content;
+    height: 240vh;
   }
 }
 
@@ -208,5 +209,35 @@
   }
   .home-benefits > .content-box > .row:last-child {
     margin-bottom: 50px;
+  }
+}
+
+.our-partners {
+  border-top: 1px solid rgb(0, 0, 0, 0.1);
+  height: 230px;
+  background-color: rgb(200, 207, 207, 0.5);
+  .content-box {
+    width: 70vw;
+    max-width: 690px;
+    margin: 0px auto 50px auto;
+    padding-top: 39px;
+    h2 {
+      color: #000000;
+    }
+    .clients {
+      margin-top: 35px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+}
+@media (max-width: $breakpoint-md) {
+  .our-partners {
+    height: 40vh;
+    .content-box {
+      width: 85vw;
+    }
   }
 }
