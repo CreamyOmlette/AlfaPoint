@@ -32,20 +32,17 @@
   display: flex;
   .content {
     width: 50%;
-    background-color: #2a2a2a;
-    background-image: url("../../assets/icons/what-we-do-logo.svg");
-    background-position: right bottom;
-    background-repeat: no-repeat;
+    background-color: #c8cfcf;
     .content-box {
       margin-top: calc(75vh * 0.35);
       margin-bottom: calc(75vh * 0.35);
       margin-left: 25px;
       margin-right: 25px;
       h2 {
-        color: rgba(255, 255, 255, 0.75);
+        color: rgba(0, 0, 0, 0.65);
       }
       p {
-        color: rgba(255, 255, 255, 0.45);
+        color: #000000;
         text-align: justify;
       }
     }
@@ -86,5 +83,130 @@
     padding-top: 4rem;
     color: #2a2a2a;
     text-align: center;
+  }
+}
+
+.our-team {
+  height: 950px;
+  background-color: rgb(200, 207, 207, 0.2);
+  .content {
+    width: 70vw;
+    max-width: 690px;
+    margin: 0px auto 50px auto;
+    padding-top: 118px;
+    &-desc {
+      h2 {
+        color: black;
+        font-weight: 400;
+      }
+      p:not(:first-child) {
+        margin-top: 2rem;
+      }
+      margin-bottom: 2rem;
+    }
+    .featured-employees {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .employee {
+        width: calc((100% - 22px) / 2);
+        .photo {
+          aspect-ratio: 334/502;
+          background-image: url("../../assets/img/employee-1.png");
+          background-position: center;
+          background-size: cover;
+          position: relative;
+          .btn-linkedin {
+            width: 80px;
+            height: 33px;
+            color: #3d8cff;
+            border: 2px solid #3d8cff;
+            border-radius: 4px;
+            position: absolute;
+            right: 19px;
+            top: 20px;
+            text-align: center;
+            line-height: 33px;
+            transition: all 0.1s ease-in-out;
+            &:hover {
+              background-color: #3d8cff;
+              color: white;
+            }
+          }
+        }
+      }
+      .name {
+        margin-top: 11px;
+        color: #2a2a2a;
+        font-size: 21px;
+        line-height: 28px;
+        font-weight: 500;
+      }
+      .function {
+        font-size: 12px;
+        color: #2a2a2a;
+      }
+    }
+  }
+}
+@media (max-width: $breakpoint-md) {
+  .our-team {
+    .content {
+      width: 85vw;
+    }
+  }
+}
+@media (max-width: $breakpoint-sm) {
+  .our-team > .content > .featured-employees > .employee {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .our-team {
+    height: max-content;
+  }
+}
+
+.home-benefits {
+  height: max-content;
+  background-color: rgb(200, 207, 207, 0.5);
+  .content-box {
+    width: 70vw;
+    max-width: 690px;
+    margin: 0px auto 0px auto;
+    padding-top: 118px;
+    padding-bottom: 50px;
+    h2 {
+      color: black;
+      font-weight: 400;
+    }
+    .row {
+      margin-top: 25px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .content-block {
+        width: calc((100% - 20px) / 2);
+        p {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .home-benefits {
+    .content-box {
+      width: 85vw;
+    }
+  }
+}
+@media (max-width: $breakpoint-sm) {
+  .home-benefits > .content-box > .row > .content-block {
+    width: 100%;
+  }
+  .home-benefits > .content-box > .row:last-child {
+    margin-bottom: 50px;
   }
 }

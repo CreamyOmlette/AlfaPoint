@@ -28,6 +28,89 @@ export function Home() {
         <h2>What we do</h2>
         <ServicesSlider></ServicesSlider>
       </div>
+      <div className="our-team">
+        <div className="content">
+          <div className="content-desc">
+            <h2>Our team</h2>
+            <p>
+              As we do with all our clients, we build extremely close
+              relationships within our team, in order to create a true sense of
+              caring, family and teamwork between many different groups and
+              nationalities.
+            </p>
+            <p>
+              When we recruit talent, we’re looking for curious, intelligent,
+              problem-solvers. By adding thoughtful, original ideas, our
+              engineers and designers take pride in their creations and
+              naturally produce their best work.
+            </p>
+          </div>
+          <div className="featured-employees">
+            <div className="employee">
+              <div className="photo">
+                <a className="btn-linkedin" href="#">
+                  linkedin
+                </a>
+              </div>
+              <div className="name">Vladislav Matvei</div>
+              <div className="function">CTO, Co-founder</div>
+            </div>
+            <div className="employee">
+              <div className="photo">
+                <a className="btn-linkedin" href="#">
+                  linkedin
+                </a>
+              </div>
+              <div className="name">Dumitru Lipceanu</div>
+              <div className="function">CEO, Co-founder</div>
+            </div>
+          </div>
+          <p></p>
+        </div>
+      </div>
+      <div className="home-benefits">
+        <div className="content-box">
+          <h2>Benefits of working with us</h2>
+          <div className="row">
+            <div className="content-block">
+              <p>COLLABORATE DIRECTLY</p>
+              <p>
+                Build your own in-house development team in partnership with us,
+                with access to our pool of solution architects and senior
+                software developers that report directly to you and work
+                alongside your team.
+              </p>
+            </div>
+            <div className="content-block">
+              <p>STAY UP TO DATE</p>
+              <p>
+                Keep your expectations managed with regular, clear progress
+                reports, screenshots, and videos related to your project’s
+                milestones from our team straight to yours.
+              </p>
+            </div>
+          </div>
+          <div className="row">
+            <div className="content-block">
+              <p>COMMUNICATE WITH EASE</p>
+              <p>
+                Our team is professionally trained to clearly articulate the
+                next steps, expected timelines and how many hours a project is
+                taking. We take care to set and manage expectations upfront and
+                along the product development process.
+              </p>
+            </div>
+            <div className="content-block">
+              <p>THE CLIENT IN MIND</p>
+              <p>
+                Our team is well trained in working remotely, especially as an
+                original team’s extension. Our priority when designing and
+                implementing the business processes is transparency.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

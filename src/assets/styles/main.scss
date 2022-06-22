@@ -23,8 +23,8 @@
   align-items: center;
 }
 .container {
-  margin-left: 25px;
-  margin-right: 25px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 a {
   text-decoration: none;
@@ -34,6 +34,10 @@ a {
 @media (max-width: $breakpoint-md) {
   .hide-md {
     display: none;
+  }
+  .container {
+    margin-left: 25px;
+    margin-right: 25px;
   }
 }
 
