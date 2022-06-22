@@ -68,6 +68,16 @@
   }
 }
 
+@media (max-width: $breakpoint-md) and (orientation: landscape) {
+  .slide-bg {
+    height: 200vh;
+    background-image: url("../../assets/img/slide-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 25%;
+  }
+}
+
 @media (max-width: $breakpoint-sm) {
   .hero > .heading > h1 {
     width: calc(100vw - 50px);

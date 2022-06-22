@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, A11y, Grid } from "swiper";
+import { Navigation, A11y, Grid, Autoplay } from "swiper";
 import "./style.scss";
 import "swiper/scss";
 import "swiper/scss/grid";
@@ -55,12 +55,13 @@ export function IconSlider() {
   return (
     <div className="slider-wrapper">
       <Swiper
-        modules={[A11y, Navigation, Grid]}
+        modules={[A11y, Navigation, Grid, Autoplay]}
         spaceBetween={5}
         slidesPerView={slidesPerView}
         navigation={{ draggable: true }}
         grid={{ rows: 1 }}
         className="icon-slider"
+        autoplay={{ delay: 5000 }}
         breakpoints={{
           200: {
             grid: { rows: 2 },

@@ -11,7 +11,6 @@
     p {
       margin-bottom: 40px;
       color: white;
-      font-size: 16px;
     }
     form {
       display: flex;
@@ -23,10 +22,12 @@
         &:focus {
           outline: none;
           border-bottom: rgba(255, 255, 255, 0.8) solid 1px;
+          border-radius: 0;
         }
         background-color: #3d8cff;
         margin-bottom: 20px;
         border: none;
+        border-radius: 0;
         border-bottom: rgba(255, 255, 255, 0.5) solid 1px;
         transition: all 0.2s ease-in-out;
         color: rgba(255, 255, 255, 1);
@@ -36,10 +37,12 @@
         &::placeholder {
           color: rgba(255, 255, 255, 0.4);
           line-height: 32px;
+          border-radius: 0;
         }
         &:focus {
           outline: none;
           border-bottom: rgba(255, 255, 255, 0.8) solid 1px;
+          border-radius: 0;
         }
         font-family: inherit;
         height: 180px;
@@ -76,6 +79,9 @@
   .info {
     width: 30vw;
     padding: 50px 50px 50px 50px;
+    .content-block {
+      margin-right: 20px;
+    }
     h2 {
       color: black;
     }

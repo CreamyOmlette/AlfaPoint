@@ -27,6 +27,16 @@
   z-index: -1;
 }
 
+@media (max-width: $breakpoint-md) and (orientation: landscape) {
+  .who-we-are {
+    height: 150vh !important;
+    &-bg {
+      background-size: cover;
+      background-position: 0% 75%;
+      height: 75vh;
+    }
+  }
+}
 .who-we-are {
   height: 75vh;
   display: flex;
@@ -185,7 +195,6 @@
       .content-block {
         width: calc((100% - 20px) / 2);
         p {
-          font-size: 16px;
           line-height: 24px;
         }
       }
@@ -197,6 +206,9 @@
   .home-benefits {
     .content-box {
       width: 85vw;
+      .row:not(:first-child) {
+        margin-top: 0;
+      }
     }
   }
 }
@@ -211,13 +223,14 @@
 
 .our-partners {
   border-top: 1px solid rgb(0, 0, 0, 0.1);
-  height: 230px;
+  height: max-content;
   background-color: rgb(200, 207, 207, 0.5);
   .content-box {
     width: 70vw;
     max-width: 690px;
-    margin: 0px auto 50px auto;
-    padding-top: 39px;
+    margin: 0px auto 0px auto;
+    padding-bottom: 25px;
+    padding-top: 40px;
     h2 {
       color: #000000;
     }
@@ -232,7 +245,8 @@
 }
 @media (max-width: $breakpoint-md) {
   .our-partners {
-    height: 50vh;
+    height: max-content;
+    padding-bottom: 50px;
     .content-box {
       width: 85vw;
       .clients {

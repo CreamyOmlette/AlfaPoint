@@ -1,10 +1,10 @@
 @import "../../assets/styles/_variables.scss";
 
 .what-we-do-slider {
-  padding-bottom: 93px;
+  padding-bottom: 50px;
 }
 #root > div.what-we-do > div > div {
-  padding-top: calc(4rem - 36px);
+  padding-top: 22px;
 }
 @media (hover: none) {
   .what-we-do-slide {
@@ -129,6 +129,7 @@
     position: absolute;
     transition: all 0.25s ease-in-out;
     text-align: center;
+    font-size: 14px;
     color: rgb(42, 42, 42, 0);
     top: 290px;
     left: calc((100% - 200px) * 0.5);
