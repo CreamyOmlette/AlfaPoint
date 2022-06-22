@@ -3,6 +3,8 @@
 .slide-bg {
   height: 100vh;
   background-image: url("../../assets/img/slide-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   background-position: 50% 25%;
 }
 
@@ -63,12 +65,6 @@
   .undertext,
   .know-us-btn {
     margin-bottom: 30px;
-  }
-  .slide-bg {
-    background-position: 100% 25%;
-  }
-  .hero > .undertext {
-    color: black;
   }
 }
 

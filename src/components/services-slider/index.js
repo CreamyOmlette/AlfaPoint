@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { A11y, Autoplay } from "swiper";
+import { A11y, Autoplay, Grid } from "swiper";
 import { useState, useEffect } from "react";
 import service1 from "../../assets/icons/services/1.svg";
 import service2 from "../../assets/icons/services/2.svg";
@@ -8,6 +8,7 @@ import service4 from "../../assets/icons/services/4.svg";
 import "./style.scss";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/grid";
 
 export function ServicesSlider() {
   const [windowDimension, detectHW] = useState({
@@ -63,7 +64,7 @@ export function ServicesSlider() {
   return (
     <div className="what-we-do-slider">
       <Swiper
-        modules={[A11y, Autoplay]}
+        modules={[A11y, Autoplay, Grid]}
         spaceBetween={0}
         slidesPerView={slidesPerView}
         navigation={{ draggable: true }}
@@ -71,10 +72,26 @@ export function ServicesSlider() {
           delay: 10000,
           disableOnInteraction: false,
         }}
+        breakpoints={{
+          300: {
+            grid: { rows: 2 },
+            slidesPerView: 2,
+          },
+          600: {
+            grid: { rows: 1 },
+            slidesPerView: 3,
+          },
+          950: {
+            grid: { rows: 1 },
+            slidesPerView: 4,
+          },
+        }}
+        grid={{ rows: 1, slidesPerView: 3 }}
+        className="what-we-do-swiper"
       >
         {services.map((service, index) => {
           return (
-            <SwiperSlide key={service.title}>
+            <SwiperSlide key={service.title} className="what-we-do-slide">
               <div className="what-we-do-slide-wrapper">
                 <div className="what-we-do-slide-image">
                   <div
@@ -82,6 +99,7 @@ export function ServicesSlider() {
                   ></div>
                 </div>
                 <div className="what-we-do-slide-title">{service.title}</div>
+                <div className="what-we-do-slide-explore">EXPLORE</div>
               </div>
             </SwiperSlide>
           );
