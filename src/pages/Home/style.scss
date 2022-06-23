@@ -194,11 +194,11 @@
       font-weight: 400;
     }
     .row {
-      margin-top: 25px;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
       .content-block {
+        margin-top: 25px;
         width: calc((100% - 20px) / 2);
         p {
           line-height: 24px;

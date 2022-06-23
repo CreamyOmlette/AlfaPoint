@@ -120,11 +120,13 @@
 }
 
 @media (max-width: $breakpoint-md) {
+  .navbar > .flex-end-md {
+    justify-content: flex-end;
+  }
   .logo {
-    position: absolute;
-    right: 25px;
+    padding-right: 25px;
     &-scroll {
-      right: 0px;
+      padding-right: 0px;
     }
   }
   .container-nav {

@@ -1,3 +1,16 @@
+@media (max-width: 600px) {
+  body .service-descriptor {
+    h2 {
+      font-size: 16px;
+    }
+    p {
+      font-size: 14px;
+    }
+    .navigation .service-image-container {
+      margin-right: 15px;
+    }
+  }
+}
 .service-descriptor {
   .navigation {
     &-front {
@@ -38,10 +51,10 @@
     }
     .dropdown {
       &-active {
-        transform: translateY(284px);
+        transform: translateY(500px);
       }
       position: relative;
-      bottom: 284px;
+      bottom: 500px;
       transition: all 0.5s ease-in-out;
       width: 100%;
       &-content {
@@ -72,23 +85,19 @@
   }
   &-text {
     width: 600px;
-    height: 200vh;
+    height: max-content;
   }
   &-video-container {
     z-index: 5;
     position: relative;
-    transform: translateY(-200px);
     width: calc(100vw - 600px);
-  }
-  &-video-reset {
-    transform: translateY(200px);
-    
   }
   &-video-bg {
     width: calc(100vw - 600px);
     height: 100vh;
     position: sticky;
-    top: 320px;
-    background-color: grey;
+  }
+  &-video-bg-reset {
+    top: 60px;
   }
 }

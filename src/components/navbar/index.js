@@ -26,7 +26,7 @@ export function Navbar() {
   return (
     <nav>
       <div className={`${scroll ? "navbar navbar-scroll" : "navbar"}`}>
-        <div className="container-nav flex space-between center align-center">
+        <div className="container-nav flex space-between center align-center flex-end-md">
           <div
             className={`burger show-md ${
               scroll || menuState ? "burger-scroll" : ""
@@ -37,14 +37,16 @@ export function Navbar() {
             <div className="line"></div>
             <div className="line"></div>
           </div>
-          <div className={`${scroll ? "logo logo-scroll" : "logo"}`}></div>
+          <Link to="/">
+            <div className={`${scroll ? "logo logo-scroll" : "logo"}`}></div>
+          </Link>
           <div
             className={`nav flex align-center hide-md ${
               scroll ? "nav-scroll" : ""
             }`}
           >
-            <Link>about us</Link>
-            <Link>services</Link>
+            <Link to="/">about us</Link>
+            <Link to="/services">services</Link>
             <Link>careers</Link>
             <Link
               className={`${scroll ? "contact contact-scroll" : "contact"}`}

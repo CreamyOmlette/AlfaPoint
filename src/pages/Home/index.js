@@ -94,8 +94,6 @@ export function Home() {
                 milestones from our team straight to yours.
               </p>
             </div>
-          </div>
-          <div className="row">
             <div className="content-block">
               <p>COMMUNICATE WITH EASE</p>
               <p>
