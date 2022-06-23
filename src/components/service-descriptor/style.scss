@@ -36,6 +36,10 @@
   }
 }
 .service-descriptor {
+  .container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
   .navigation {
     &-front {
       position: relative;
@@ -96,12 +100,14 @@
         li {
           display: flex;
           align-items: center;
-          margin-bottom: 12.5px;
           padding-bottom: 12.5px;
+          border-bottom: 1px solid #595959;
+          padding-top: 12.5px;
         }
         ul {
-          padding-bottom: 25px;
-          padding-top: 25px;
+          border-top: 1px solid #595959;
+          margin-top: 25px;
+          margin-bottom: 25px;
           margin-right: 50px;
           width: calc(600px - 50px);
         }
