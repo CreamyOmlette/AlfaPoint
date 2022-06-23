@@ -47,6 +47,9 @@
   p {
     margin-top: 0px;
   }
+  p:not(:first-child) {
+    margin-top: 28px;
+  }
 }
 @media (max-width: $breakpoint-md) {
   .footer-navigation {

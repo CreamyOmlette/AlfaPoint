@@ -106,15 +106,17 @@
 }
 
 @media (max-width: $breakpoint-md) {
-  .what-we-do-slide-image {
-    height: 175px;
-    width: 175px;
-    left: calc((100% - 175px) * 0.5);
-    right: calc((100% - 175px) * 0.5);
+  .what-we-do-slide {
+    .what-we-do-slide-image {
+      height: 175px;
+      width: 175px;
+      left: calc((100% - 175px) * 0.5);
+      right: calc((100% - 175px) * 0.5);
+    }
   }
-}
-
-@media (max-width: $breakpoint-md) {
+  .what-we-do-slide-title {
+    top: 260px;
+  }
   .what-we-do-slider > .what-we-do-swiper > .swiper-wrapper {
     height: 650px;
   }
