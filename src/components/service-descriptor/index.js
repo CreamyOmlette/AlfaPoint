@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import videoBg from "../../assets/img/video-bg.mp4";
+import videoBg from "../../assets/img/video-bg-1.mp4";
 import parse from "html-react-parser";
 import "./style.scss";
 
@@ -120,15 +120,15 @@ export function ServiceDescriptor() {
           <div className="dropdown-content">
             <div className="container">
               <ul>
-                <li className="flex">
+                <li>
                   <div className="service-image-container service-image-container-0"></div>
                   <h2>Web and mobile development</h2>
                 </li>
-                <li className="flex">
+                <li>
                   <div className="service-image-container service-image-container-0"></div>
                   <h2>Digital products and engineering</h2>
                 </li>
-                <li className="flex">
+                <li>
                   <div className="service-image-container service-image-container-0"></div>
                   <h2>Web and e-commerce</h2>
                 </li>
@@ -139,6 +139,7 @@ export function ServiceDescriptor() {
       </div>
       <div className="service-content">
         <div className="service-content-text">
+          {dropdownActive && <div className="overlay"></div>}
           <div className="container content-padding">
             {parse(serviceData.content)}
           </div>

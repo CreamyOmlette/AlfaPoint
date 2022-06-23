@@ -7,6 +7,14 @@
     p {
       font-size: 14px;
     }
+    .navigation {
+      h2 {
+        line-height: 18px;
+      }
+      .dropdown {
+        width: 100%;
+      }
+    }
     .navigation .service-image-container {
       margin-right: 15px;
       width: 40px;
@@ -19,7 +27,7 @@
     .navigation {
       .arrow-down {
         background-position: right 23% !important;
-        line-height: 35px;
+        line-height: 18px;
       }
       .service-active {
         align-items: flex-start !important;
@@ -75,10 +83,10 @@
       position: relative;
       bottom: 500px;
       transition: all 0.5s ease-in-out;
-      width: 100%;
+      width: 600px;
       &-content {
         z-index: 2;
-        background-color: #fff;
+        background-color: rgb(220, 227, 227);
         h2 {
           color: black;
         }
@@ -86,8 +94,16 @@
           background-color: black;
         }
         li {
+          display: flex;
           align-items: center;
-          margin-bottom: 25px;
+          margin-bottom: 12.5px;
+          padding-bottom: 12.5px;
+        }
+        ul {
+          padding-bottom: 25px;
+          padding-top: 25px;
+          margin-right: 50px;
+          width: calc(600px - 50px);
         }
         margin: 0;
         width: 100%;
