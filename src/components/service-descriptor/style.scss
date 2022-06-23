@@ -1,5 +1,8 @@
 @import "../../assets/styles/_variables.scss";
 @media (max-width: 600px) {
+  .hide-600 {
+    display: none;
+  }
   body .service-descriptor {
     h2 {
       font-size: 16px;
@@ -87,7 +90,7 @@
       position: relative;
       bottom: 500px;
       transition: all 0.5s ease-in-out;
-      width: 600px;
+      width: 100%;
       &-content {
         z-index: 2;
         background-color: rgb(220, 227, 227);
@@ -108,8 +111,6 @@
           border-top: 1px solid #595959;
           margin-top: 25px;
           margin-bottom: 25px;
-          margin-right: 50px;
-          width: calc(600px - 50px);
         }
         margin: 0;
         width: 100%;

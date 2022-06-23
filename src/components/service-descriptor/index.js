@@ -145,7 +145,7 @@ export function ServiceDescriptor() {
           </div>
         </div>
         <div
-          className={`service-content-video-container`}
+          className={`service-content-video-container hide-600`}
           style={{ transform: `translateY(${alpha}px)` }}
         >
           <div
