@@ -29,30 +29,37 @@
 
 @media (max-width: $breakpoint-md) and (orientation: landscape) {
   .who-we-are {
-    height: 150vh !important;
     &-bg {
       background-size: cover;
       background-position: 0% 75%;
-      height: 75vh;
+      height: 600px;
     }
   }
 }
+@media (min-width: $breakpoint-md) {
+  .who-we-are {
+    height: 600px;
+  }
+}
 .who-we-are {
-  height: 75vh;
   display: flex;
   .content {
     width: 50%;
-    background-color: #c8cfcf;
+    background: radial-gradient(
+      53.89% 53.89% at 50% 100%,
+      #73acff 0%,
+      #3e8cff 100%
+    );
     .content-box {
       margin-top: calc(75vh * 0.35);
       margin-bottom: calc(75vh * 0.35);
       margin-left: 50px;
       margin-right: 50px;
       h2 {
-        color: rgba(0, 0, 0, 0.65);
+        color: #fff;
       }
       p {
-        color: #000000;
+        color: #fff;
         text-align: justify;
       }
     }
@@ -67,7 +74,6 @@
 }
 @media (max-width: $breakpoint-md) {
   .who-we-are {
-    height: 115vh;
     .content {
       width: 100%;
       margin: 0;
@@ -81,7 +87,7 @@
     }
     display: block;
     &-bg {
-      height: 80vh;
+      height: 600px;
       width: 100%;
     }
   }
@@ -229,7 +235,7 @@
     width: 70vw;
     max-width: 690px;
     margin: 0px auto 0px auto;
-    padding-bottom: 25px;
+    padding-bottom: 50px;
     padding-top: 40px;
     h2 {
       color: #000000;

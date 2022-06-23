@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, A11y, Autoplay } from "swiper";
+import videoBg from "../../assets/img/video-bg.mp4";
 import "./style.scss";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -19,21 +20,23 @@ export function HeroSlider() {
         }}
       >
         <SwiperSlide>
+          <video autoPlay muted loop className="video-bg">
+            <source src={videoBg} type="video/mp4" />
+          </video>
+          <div className="video-overlay"></div>
           <div className="slide-bg get-to-know">
             <div className="hero">
-              <div className="question">
-                <div className="question-logo"></div>
-                <div className="question-message">What do we do?</div>
+              <div className="container padding-lg">
+                <div className="heading">
+                  <h1>
+                    We help companies <br /> in outstaffing their IT operations
+                  </h1>
+                </div>
+                <div className="undertext">
+                  <p>Enrich your team's skillset in a blink of an eye</p>
+                </div>
+                <div className="know-us-btn">GET TO KNOW US</div>
               </div>
-              <div className="heading">
-                <h1>
-                  We help companies <br /> in outstaffing their IT operations
-                </h1>
-              </div>
-              <div className="undertext">
-                <p>Enrich your team's skillset in a blink of an eye</p>
-              </div>
-              <div className="know-us-btn">GET TO KNOW US</div>
             </div>
           </div>
         </SwiperSlide>

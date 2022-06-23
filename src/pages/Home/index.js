@@ -27,7 +27,7 @@ export function Home() {
             </p>
           </div>
         </div>
-        <div className="who-we-are-bg loading"></div>
+        <div className="who-we-are-bg"></div>
       </div>
       <div className="what-we-do">
         <h2>What we do</h2>

@@ -9,6 +9,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-origin: content-box;
+  background-size: contain;
   &-angular {
     background-image: url("../../assets/icons/tech/angular.svg");
   }
@@ -77,6 +78,13 @@
 @media (max-width: $breakpoint-md) {
   .icon-slider > .swiper-wrapper {
     height: 330px;
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .icon {
+    width: 50px;
+    height: 50px;
   }
 }
 

@@ -13,24 +13,8 @@
         .what-we-do-slide-image {
           background-color: #3d8cff;
           border-color: #3d8cff;
-          .what-we-do-slide-image-container {
-            background-color: transparent;
-            &-0 {
-              mask: none;
-              background-image: url("../../assets/icons/services/1-hover.svg");
-            }
-            &-1 {
-              mask: none;
-              background-image: url("../../assets/icons/services/2-hover.svg");
-            }
-            &-2 {
-              mask: none;
-              background-image: url("../../assets/icons/services/3-hover.svg");
-            }
-            &-3 {
-              mask: none;
-              background-image: url("../../assets/icons/services/4-hover.svg");
-            }
+          &-container {
+            background-color: #fff;
           }
         }
       }
@@ -45,24 +29,8 @@
           transform: translateY(-40px);
           background-color: #3d8cff;
           border-color: #3d8cff;
-          .what-we-do-slide-image-container {
-            background-color: transparent;
-            &-0 {
-              mask: none;
-              background-image: url("../../assets/icons/services/1-hover.svg");
-            }
-            &-1 {
-              mask: none;
-              background-image: url("../../assets/icons/services/2-hover.svg");
-            }
-            &-2 {
-              mask: none;
-              background-image: url("../../assets/icons/services/3-hover.svg");
-            }
-            &-3 {
-              mask: none;
-              background-image: url("../../assets/icons/services/4-hover.svg");
-            }
+          &-container {
+            background-color: #fff;
           }
         }
         .what-we-do-slide-title {
@@ -146,9 +114,18 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: $breakpoint-md) {
   .what-we-do-slider > .what-we-do-swiper > .swiper-wrapper {
     height: 650px;
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .what-we-do-slider > .what-we-do-swiper > .swiper-wrapper {
+    height: 1300px;
+  }
+  .swiper-wrapper > .what-we-do-slide {
+    height: calc((100% - 30px) / 4) !important;
   }
 }
 

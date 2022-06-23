@@ -95,7 +95,7 @@
   .contact-section {
     .form,
     .info {
-      padding: 25px;
+      padding: 50px 25px 50px 25px;
     }
   }
 }
@@ -106,11 +106,21 @@
     .form,
     .info {
       width: 100vw;
+      .btn-container {
+        place-content: flex-start;
+      }
     }
 
     .info {
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
+      .content-block > p {
+        margin-top: 15px;
+      }
+      .locations {
+        margin-top: 25px;
+      }
     }
   }
 }
