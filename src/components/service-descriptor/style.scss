@@ -1,3 +1,4 @@
+@import "../../assets/styles/_variables.scss";
 @media (max-width: 600px) {
   body .service-descriptor {
     h2 {
@@ -8,6 +9,21 @@
     }
     .navigation .service-image-container {
       margin-right: 15px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+@media (max-width: $breakpoint-sm) {
+  .service-descriptor {
+    .navigation {
+      .arrow-down {
+        background-position: right 23% !important;
+        line-height: 35px;
+      }
+      .service-active {
+        align-items: flex-start !important;
+      }
     }
   }
 }
@@ -28,7 +44,9 @@
     }
     .service-active {
       display: flex;
+      align-items: center;
       margin-bottom: 25px;
+      padding-right: 25px;
     }
     .arrow-down {
       background: url("../../assets/icons/services/arrow-down.svg") no-repeat;
@@ -42,6 +60,7 @@
     .service-image-container {
       width: 64px;
       height: 64px;
+      min-width: 64px;
       margin-right: 25px;
       background-color: #fff;
       &-0 {
@@ -67,6 +86,7 @@
           background-color: black;
         }
         li {
+          align-items: center;
           margin-bottom: 25px;
         }
         margin: 0;
