@@ -118,18 +118,15 @@ export function ServiceDescriptor() {
         </div>
         <div className={`dropdown ${dropdownActive ? "dropdown-active" : ""}`}>
           <div className="dropdown-content">
-            <div className="container">
+            <div className="container dropdown-content-width">
               <ul>
                 <li>
-                  <div className="service-image-container service-image-container-0"></div>
                   <h2>Web and mobile development</h2>
                 </li>
                 <li>
-                  <div className="service-image-container service-image-container-0"></div>
                   <h2>Digital products and engineering</h2>
                 </li>
                 <li>
-                  <div className="service-image-container service-image-container-0"></div>
                   <h2>Web and e-commerce</h2>
                 </li>
               </ul>
@@ -139,7 +136,6 @@ export function ServiceDescriptor() {
       </div>
       <div className="service-content">
         <div className="service-content-text">
-          {dropdownActive && <div className="overlay"></div>}
           <div className="container content-padding">
             {parse(serviceData.content)}
           </div>
@@ -149,14 +145,14 @@ export function ServiceDescriptor() {
           style={{ transform: `translateY(${alpha}px)` }}
         >
           <div
-            className={`service-content-video-bg ${
+            className={`service-content-video ${
               scroll ? "service-content-video-bg-reset" : ""
             }`}
           >
-            <video autoPlay muted loop className="video-bg">
+            <video autoPlay muted loop className="service-content-video-bg">
               <source src={videoBg} type="video/mp4" />
             </video>
-            <div className="video-overlay"></div>
+            <div className="service-content-video-overlay"></div>
           </div>
         </div>
       </div>

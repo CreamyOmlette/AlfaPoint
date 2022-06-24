@@ -2,7 +2,7 @@
 
 .video-bg {
   position: absolute;
-  width: calc(100vw - 600px);
+  width: 100vw;
   height: 100%;
   top: 0;
   left: 0;
@@ -11,7 +11,7 @@
 }
 .video-overlay {
   position: absolute;
-  width: calc(100vw - 600px);
+  width: 100vw;
   height: 100%;
   top: 0;
   left: 0;
