@@ -12,7 +12,7 @@ const App = () => (
       <Navbar />
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/services" exact component={Services} />
+        <Route path="/services/:id" exact component={Services} />
       </Switch>
       <Footer />
     </ScrollToTop>

@@ -70,25 +70,25 @@ export function Navbar() {
           </div>
         </div>
         <ul>
-          <div className="separator"></div>
-          <li>
+          <div className="separator" key="1"></div>
+          <li key="nav-about-us">
             <Link to="/" onClick={toggleMenu}>
               <h2>about us</h2>
             </Link>
           </li>
-          <div className="separator"></div>
-          <li>
+          <div className="separator" key="2"></div>
+          <li key="nav-services">
             <Link to="/services" onClick={toggleMenu}>
               <h2>services</h2>
             </Link>
           </li>
-          <div className="separator"></div>
-          <li>
+          <div className="separator" key="3"></div>
+          <li key="careers">
             <Link onClick={toggleMenu}>
               <h2>careers</h2>
             </Link>
           </li>
-          <div className="separator"></div>
+          <div className="separator" key="4"></div>
         </ul>
       </div>
     </nav>
