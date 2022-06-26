@@ -1,6 +1,5 @@
 import "./style.scss";
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
 import parse from "html-react-parser";
 import { Vacancies } from "../../components/vacancies";
 import { ContactForm } from "../../components/contact-form";
