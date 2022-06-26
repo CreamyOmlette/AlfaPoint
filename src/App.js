@@ -5,6 +5,7 @@ import { Navbar } from "./components/navbar";
 import { Footer } from "./components/footer";
 import { Services } from "./pages/Services";
 import ScrollToTop from "./components/scroll-to-top";
+import { Careers } from "./pages/Careers";
 
 const App = () => (
   <BrowserRouter>
@@ -13,6 +14,7 @@ const App = () => (
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/services/:id" exact component={Services} />
+        <Route path="/careers" exact component={Careers} />
       </Switch>
       <Footer />
     </ScrollToTop>
