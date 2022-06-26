@@ -63,7 +63,7 @@ export function Navbar() {
             <NavLink to="/">home</NavLink>
             <div className="nav-services">
               <div
-                className={`${
+                className={`questerial ${
                   scroll ? "nav-services-link-scroll" : "nav-services-link"
                 }`}
               >
@@ -131,7 +131,7 @@ export function Navbar() {
               className="nav-menu-services"
               onClick={toggleMenuDropdown}
             >
-              <h2>services</h2>
+              <h2 className="questerial">services</h2>
               <div className="nav-menu-services-arrow-down">
                 <div
                   className={`nav-menu-services-arrow-down-container ${

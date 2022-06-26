@@ -8,7 +8,7 @@ import "./style.scss";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/grid";
-import { NavLink, useParams, useHistory } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 
 export function OtherServicesSlider() {
   const { id } = useParams();
