@@ -11,8 +11,17 @@ import benefits1 from "../../assets/icons/home-benefits/home-benefits-1.svg";
 import benefits2 from "../../assets/icons/home-benefits/home-benefits-2.svg";
 import benefits3 from "../../assets/icons/home-benefits/home-benefits-3.svg";
 import benefits4 from "../../assets/icons/home-benefits/home-benefits-4.svg";
+import { useParams } from "react-router-dom";
+import { useEffect, useRef } from "react";
 
 export function Home() {
+  const { id } = useParams();
+  const ourTeam = useRef(null);
+  useEffect(() => {
+    if (id === "our-team") {
+      ourTeam.current.scrollIntoView();
+    }
+  }, [id, ourTeam]);
   return (
     <>
       <HeroSlider></HeroSlider>
@@ -39,7 +48,7 @@ export function Home() {
         <h2>What we do</h2>
         <ServicesSlider></ServicesSlider>
       </div>
-      <div className="our-team">
+      <div ref={ourTeam} className="our-team">
         <div className="content">
           <div className="content-desc">
             <h2>Our team</h2>

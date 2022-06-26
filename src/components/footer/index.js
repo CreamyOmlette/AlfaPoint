@@ -1,4 +1,5 @@
 import "./style.scss";
+import { NavLink } from "react-router-dom";
 
 export function Footer() {
   return (
@@ -23,20 +24,27 @@ export function Footer() {
           <div>
             <h4>Company</h4>
             <div className="footer-list">
-              <a href="/#">about us</a>
-              <a href="/#">services</a>
-              <a href="/#">contact us</a>
-              <a href="/#">careers</a>
-              <a href="/#">our team</a>
+              <NavLink to="/">home</NavLink>
+              <NavLink to="/">contact us</NavLink>
+              <NavLink to="/careers">careers</NavLink>
+              <NavLink to="/">our team</NavLink>
             </div>
           </div>
           <div>
             <h4>Products and services</h4>
             <div className="footer-list footer-navigation-services">
-              <a href="/#">outsourcing/extended teams</a>
-              <a href="/#">web and mobile development</a>
-              <a href="/#">digital products and engineering</a>
-              <a href="/#">web and e-commerce</a>
+              <NavLink to="/services/outsourcing-extended-teams">
+                outsourcing/extended teams
+              </NavLink>
+              <NavLink to="/services/web-and-mobile-development">
+                web and mobile development
+              </NavLink>
+              <NavLink to="/services/digital-products-and-engineering">
+                digital products and engineering
+              </NavLink>
+              <NavLink to="/services/web-and-e-commerce">
+                web and e-commerce
+              </NavLink>
             </div>
           </div>
           <div>

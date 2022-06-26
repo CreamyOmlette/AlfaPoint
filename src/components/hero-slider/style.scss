@@ -76,7 +76,13 @@
     margin-bottom: 30px;
   }
 }
-
+@media (max-height: 390px) and (orientation: landscape) {
+  .hero {
+    h1 {
+      font-size: 32px;
+    }
+  }
+}
 @media (max-width: $breakpoint-md) and (orientation: landscape) {
   .slide-bg {
     background-image: url("../../assets/img/slide-bg.png");
