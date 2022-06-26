@@ -36,7 +36,7 @@
         .what-we-do-slide-title {
           transform: translateY(-55px);
         }
-        .what-we-do-slide-explore {
+        .what-we-do-slide-explore > small {
           color: rgb(42, 42, 42, 0.3);
         }
       }
@@ -94,7 +94,7 @@
     left: calc((100% - 200px) * 0.5);
     right: calc((100% - 200px) * 0.5);
   }
-  &-explore {
+  &-explore > small {
     position: absolute;
     transition: all 0.25s ease-in-out;
     text-align: center;

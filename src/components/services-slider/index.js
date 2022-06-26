@@ -76,7 +76,9 @@ export function ServicesSlider() {
                     ></div>
                   </div>
                   <div className="what-we-do-slide-title">{service.title}</div>
-                  <div className="what-we-do-slide-explore">EXPLORE</div>
+                  <div className="what-we-do-slide-explore">
+                    <small>EXPLORE</small>
+                  </div>
                 </div>
               </NavLink>
             </SwiperSlide>

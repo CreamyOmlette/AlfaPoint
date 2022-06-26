@@ -13,7 +13,7 @@ export function Footer() {
             <br /> All rights Reserved
           </div>
           <div>
-            <h3>Social media</h3>
+            <h4>Social media</h4>
             <div className="footer-list">
               <a href="/#">Facebook</a>
               <a href="/#">Instagram</a>
@@ -21,7 +21,7 @@ export function Footer() {
             </div>
           </div>
           <div>
-            <h3>Company</h3>
+            <h4>Company</h4>
             <div className="footer-list">
               <a href="/#">about us</a>
               <a href="/#">services</a>
@@ -31,7 +31,7 @@ export function Footer() {
             </div>
           </div>
           <div>
-            <h3>Products and services</h3>
+            <h4>Products and services</h4>
             <div className="footer-list footer-navigation-services">
               <a href="/#">outsourcing/extended teams</a>
               <a href="/#">web and mobile development</a>
@@ -40,7 +40,7 @@ export function Footer() {
             </div>
           </div>
           <div>
-            <h3>Get in touch</h3>
+            <h4>Get in touch</h4>
             <div className="footer-list">
               <p>
                 d.lipceanu@alfa-point.com
