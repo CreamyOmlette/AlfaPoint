@@ -8,10 +8,11 @@ import "./style.scss";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/grid";
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink, useParams, useHistory } from "react-router-dom";
 
 export function OtherServicesSlider() {
   const { id } = useParams();
+  const history = useHistory();
   const services = [
     {
       image: service1,
@@ -69,14 +70,16 @@ export function OtherServicesSlider() {
     >
       {featuredServices.map((service, index) => {
         return (
-          <SwiperSlide key={service.title} className="services-slide">
-            <NavLink to={`services/${service.path}`}>
-              <div className="services-slide-icon services-slide-icon-0"></div>
-              <div className="services-slide-content">
-                <h3>{service.title}</h3>
-                <small>EXPLORE</small>
-              </div>
-            </NavLink>
+          <SwiperSlide
+            key={service.title}
+            className="services-slide"
+            onClick={() => history.replace(`${service.path}`)}
+          >
+            <div className="services-slide-icon services-slide-icon-0"></div>
+            <div className="services-slide-content">
+              <h3>{service.title}</h3>
+              <small>EXPLORE</small>
+            </div>
           </SwiperSlide>
         );
       })}
