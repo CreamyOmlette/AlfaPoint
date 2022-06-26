@@ -15,24 +15,28 @@ export function OtherServicesSlider() {
   const history = useHistory();
   const services = [
     {
+      id: 0,
       image: service1,
       title: "Outsourcing /Extended teams",
       link: "test",
       path: "outsourcing-extended-teams",
     },
     {
+      id: 1,
       image: service2,
       title: "Web and mobile development",
       link: "test",
       path: "web-and-mobile-development",
     },
     {
+      id: 2,
       image: service3,
       title: "Digital products & Engineering",
       link: "test",
       path: "digital-products-and-engineering",
     },
     {
+      id: 3,
       image: service4,
       title: "Web & eCommerce",
       link: "test",
@@ -75,10 +79,14 @@ export function OtherServicesSlider() {
             className="services-slide"
             onClick={() => history.replace(`${service.path}`)}
           >
-            <div className="services-slide-icon services-slide-icon-0"></div>
+            <div
+              className={`services-slide-icon services-slide-icon-${service.id}`}
+            ></div>
             <div className="services-slide-content">
-              <h3>{service.title}</h3>
-              <small>EXPLORE</small>
+              <div className="services-slide-content-container">
+                <h3>{service.title}</h3>
+                <small>EXPLORE</small>
+              </div>
             </div>
           </SwiperSlide>
         );
