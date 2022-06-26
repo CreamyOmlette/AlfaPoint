@@ -17,6 +17,38 @@ export function Careers() {
     We work with some of the leading international companies on unique projects that matter. If you are engaged, hard-working and willing to develop yourself professionally, Alfapoint is just the right place for you! Check the vacancy in the bottom and we are looking forward to meeting you!
     </p>`,
   };
+  const vacancies = [
+    {
+      id: 0,
+      title: "Backend Java Developer - Senior",
+      location: "Chisinau, Moldova",
+      client: "Germany, EU",
+    },
+    {
+      id: 1,
+      title: "Backend Java Developer - Junior",
+      location: "Chisinau, Moldova",
+      client: "Germany, EU",
+    },
+    {
+      id: 2,
+      title: "Backend Java Developer - Middle",
+      location: "Chisinau, Moldova",
+      client: "Germany, EU",
+    },
+    {
+      id: 3,
+      title: "Backend Java Developer - Senior",
+      location: "Chisinau, Moldova",
+      client: "Germany, EU",
+    },
+    {
+      id: 4,
+      title: "Backend Java Developer - Senior",
+      location: "Chisinau, Moldova",
+      client: "Germany, EU",
+    },
+  ];
   const [scroll, setScroll] = useState(false);
   const [alpha, setAlpha] = useState(-200);
   const [dropdownActive, setDropdown] = useState(false);
@@ -98,7 +130,7 @@ export function Careers() {
       <div className="vacancies">
         <div className="vacancies-container">
           <h2>Vacancies to consider</h2>
-          <Vacancies></Vacancies>
+          <Vacancies vacancies={vacancies}></Vacancies>
         </div>
       </div>
     </>

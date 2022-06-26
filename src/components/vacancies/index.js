@@ -1,56 +1,24 @@
+import { NavLink } from "react-router-dom";
 import "./style.scss";
 
 export function Vacancies(props) {
-  const vacancies = [
-    {
-      title: "Backend Java Developer - Senior",
-      location: "Chisinau, Moldova",
-      client: "Germany, EU",
-      path: "",
-    },
-    {
-      title: "Backend Java Developer - Senior",
-      location: "Chisinau, Moldova",
-      client: "Germany, EU",
-      path: "",
-    },
-    {
-      title: "Backend Java Developer - Senior",
-      location: "Chisinau, Moldova",
-      client: "Germany, EU",
-      path: "",
-    },
-    {
-      title: "Backend Java Developer - Senior",
-      location: "Chisinau, Moldova",
-      client: "Germany, EU",
-      path: "",
-    },
-    {
-      title: "Backend Java Developer - Senior",
-      location: "Chisinau, Moldova",
-      client: "Germany, EU",
-      path: "",
-    },
-  ];
-
   return (
     <>
-      <div className="vacancies-row">
+      <div className="vacancies-row location-hidden">
         <h4>POSITION</h4>
-        <h4>LOCATION</h4>
+        <h4 className="location">LOCATION</h4>
         <h4>CLIENT</h4>
       </div>
       <div className="vacancies-separator"></div>
-      {vacancies.map((v) => (
+      {props.vacancies.map((v) => (
         <>
-          <div className="vacancies-row">
+          <div className="vacancies-row  location-hidden">
             <small>{v.title}</small>
-            <small>{v.location}</small>
+            <small className="location">{v.location}</small>
             <small>{v.client}</small>
-            <a className="vacancies-apply" href="/#">
+            <NavLink className="vacancies-apply" to={`/careers/${v.id}`}>
               Apply
-            </a>
+            </NavLink>
           </div>
           <div className="vacancies-separator"></div>
         </>

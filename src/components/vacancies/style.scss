@@ -1,7 +1,21 @@
 @import "../../assets/styles/_variables.scss";
+
 .vacancies-row {
   display: flex;
   align-items: center;
+  min-height: 50px;
+  &.location-hidden {
+    small,
+    h4 {
+      width: 33.3%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding-right: 10px;
+    }
+    .location {
+      display: none;
+    }
+  }
   small,
   h4 {
     width: 22.5%;

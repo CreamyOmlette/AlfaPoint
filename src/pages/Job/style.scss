@@ -1,0 +1,65 @@
+@import "../../assets/styles/_variables.scss";
+.job-title {
+  height: 330px;
+  width: 100%;
+  background-color: #2a2a2a;
+  h2,
+  small {
+    display: inline-block;
+  }
+  &-content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 100%;
+    padding-bottom: 25px;
+  }
+  .container {
+    height: 100%;
+  }
+}
+
+.job {
+  display: flex;
+  flex-wrap: wrap;
+  .container {
+    width: 50vw;
+  }
+  &-description {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width: 50vw;
+    p:first-child {
+      margin-top: 0px;
+    }
+  }
+}
+
+.other-vacancies {
+  background-color: rgba(200, 207, 207, 0.1);
+  padding-left: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-right: 50px;
+  width: 50vw;
+  h2,
+  h4,
+  small {
+    color: #2a2a2a;
+  }
+}
+@media (max-width: $breakpoint-md) {
+  .other-vacancies {
+    padding-right: 25px;
+  }
+}
+@media (max-width: 560px) {
+  .job {
+    .container {
+      width: 100vw;
+    }
+  }
+  .other-vacancies {
+    width: 100vw;
+  }
+}
