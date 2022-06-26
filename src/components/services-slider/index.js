@@ -8,6 +8,7 @@ import "./style.scss";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/grid";
+import { NavLink } from "react-router-dom";
 
 export function ServicesSlider() {
   const services = [
@@ -15,21 +16,25 @@ export function ServicesSlider() {
       image: service1,
       title: "Outsourcing /Extended teams",
       link: "test",
+      path: "outsourcing-extended-teams",
     },
     {
       image: service2,
       title: "Web and mobile development",
       link: "test",
+      path: "web-and-mobile-development",
     },
     {
       image: service3,
       title: "Digital products & Engineering",
       link: "test",
+      path: "digital-products-and-engineering",
     },
     {
       image: service4,
       title: "Web & eCommerce",
       link: "test",
+      path: "web-and-e-commerce",
     },
   ];
   return (
@@ -63,15 +68,17 @@ export function ServicesSlider() {
         {services.map((service, index) => {
           return (
             <SwiperSlide key={service.title} className="what-we-do-slide">
-              <div className="what-we-do-slide-wrapper">
-                <div className="what-we-do-slide-image">
-                  <div
-                    className={`what-we-do-slide-image-container what-we-do-slide-image-container-${index}`}
-                  ></div>
+              <NavLink to={`/services/${service.path}`}>
+                <div className="what-we-do-slide-wrapper">
+                  <div className="what-we-do-slide-image">
+                    <div
+                      className={`what-we-do-slide-image-container what-we-do-slide-image-container-${index}`}
+                    ></div>
+                  </div>
+                  <div className="what-we-do-slide-title">{service.title}</div>
+                  <div className="what-we-do-slide-explore">EXPLORE</div>
                 </div>
-                <div className="what-we-do-slide-title">{service.title}</div>
-                <div className="what-we-do-slide-explore">EXPLORE</div>
-              </div>
+              </NavLink>
             </SwiperSlide>
           );
         })}

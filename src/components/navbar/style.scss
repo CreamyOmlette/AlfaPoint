@@ -5,6 +5,50 @@
   margin-right: 50px;
   height: 100%;
 }
+.nav-menu-services {
+  &-arrow-down {
+    display: inline-block;
+    padding-left: 15px;
+    width: calc(12px + 15px);
+    height: 17px;
+    padding-top: 7px;
+    padding-bottom: 3px;
+    background-origin: content-box;
+    position: relative;
+    &-container {
+      width: 12px;
+      height: 7px;
+      position: absolute;
+      background: url("../../assets/icons/arrow-down-black.svg") left center
+        no-repeat;
+      transition: transform 0.2s ease-in-out;
+      &-active {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .nav-menu-services-dropdown {
+    h2 {
+      font-size: 16px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    ul {
+      margin-top: 0;
+    }
+    .separator {
+      margin-left: 0;
+      margin-right: 0;
+      width: calc(100% - 25px);
+    }
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s ease-in-out;
+    &-active {
+      max-height: 600px;
+    }
+  }
+}
 .nav-services {
   margin-left: 60px;
   position: relative;
@@ -21,7 +65,7 @@
   }
   &-dropdown {
     display: none;
-    padding-top: 19.5px;
+    padding-top: 20px;
     width: 270px;
     position: absolute;
     ul {
@@ -179,6 +223,9 @@
 }
 
 .nav-menu {
+  h2 {
+    display: inline-block;
+  }
   z-index: 100;
   ul {
     .separator {
@@ -188,12 +235,13 @@
       opacity: 0.2;
       background-color: #3f3f3f;
     }
-    margin-top: 100px;
+    margin-top: 50px;
     &.scroll {
       margin-top: 40px;
     }
     li {
       margin-left: 25px;
+      margin-right: 25px;
 
       h2 {
         padding-top: 30px;

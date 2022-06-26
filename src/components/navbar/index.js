@@ -6,6 +6,7 @@ import "./style.scss";
 export function Navbar() {
   const [scroll, setScroll] = useState(false);
   const [menuState, setMenuState] = useState(false);
+  const [menuDropdownState, setMenuDropdownState] = useState(false);
 
   const handleScroll = () => {
     const scrollval = window.pageYOffset > 1 ? true : false;
@@ -14,6 +15,12 @@ export function Navbar() {
 
   const toggleMenu = () => {
     setMenuState(!menuState);
+    setMenuDropdownState(false);
+  };
+
+  const toggleMenuDropdown = () => {
+    console.log("click");
+    setMenuDropdownState(!menuDropdownState);
   };
 
   useEffect(() => {
@@ -23,6 +30,14 @@ export function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    if (menuState) {
+      document.body.style.overflow = "hidden";
+      return;
+    }
+    document.body.style.overflow = "visible";
+  }, [menuState]);
   return (
     <nav>
       <div className={`${scroll ? "navbar navbar-scroll" : "navbar"}`}>
@@ -81,6 +96,7 @@ export function Navbar() {
             </div>
             <NavLink to="/careers">careers</NavLink>
             <Link
+              to="/"
               className={`${scroll ? "contact contact-scroll" : "contact"}`}
             >
               contact us
@@ -98,7 +114,7 @@ export function Navbar() {
         </div>
         <div className={`contact-menu ${scroll ? "contact-menu-scroll" : ""}`}>
           <div className="contact-menu-btn">
-            <Link>contact us</Link>
+            <Link to="/">contact us</Link>
           </div>
         </div>
         <ul>
@@ -110,9 +126,66 @@ export function Navbar() {
           </li>
           <div className="separator" key="2"></div>
           <li key="nav-services">
-            <NavLink to="/services" onClick={toggleMenu}>
+            <div
+              to="/services"
+              className="nav-menu-services"
+              onClick={toggleMenuDropdown}
+            >
               <h2>services</h2>
-            </NavLink>
+              <div className="nav-menu-services-arrow-down">
+                <div
+                  className={`nav-menu-services-arrow-down-container ${
+                    menuDropdownState
+                      ? "nav-menu-services-arrow-down-container-active"
+                      : ""
+                  }`}
+                ></div>
+              </div>
+              <div
+                className={`nav-menu-services-dropdown ${
+                  menuDropdownState ? "nav-menu-services-dropdown-active" : ""
+                }`}
+              >
+                <ul>
+                  <li>
+                    <div className="separator"></div>
+                    <NavLink
+                      to="/services/web-and-mobile-development"
+                      onClick={toggleMenu}
+                    >
+                      <h2>web and mobile development</h2>
+                    </NavLink>
+                    <div className="separator"></div>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/services/digital-products-and-engineering"
+                      onClick={toggleMenu}
+                    >
+                      <h2>digital products & engineering</h2>
+                    </NavLink>
+                    <div className="separator"></div>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="services/outsourcing-extended-teams"
+                      onClick={toggleMenu}
+                    >
+                      <h2>outsourcing / extended teams</h2>
+                    </NavLink>
+                    <div className="separator"></div>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="services/web-and-e-commerce"
+                      onClick={toggleMenu}
+                    >
+                      <h2>web and e-commerce</h2>
+                    </NavLink>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </li>
           <div className="separator" key="3"></div>
           <li key="careers">
