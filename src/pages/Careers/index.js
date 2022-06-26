@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import videoBg from "../../assets/img/video-bg-1.mp4";
 import parse from "html-react-parser";
 import "./style.scss";
 
