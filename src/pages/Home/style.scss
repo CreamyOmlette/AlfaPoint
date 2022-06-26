@@ -32,27 +32,26 @@
     height: 600px;
   }
 }
+
 .who-we-are {
   display: flex;
+  background: radial-gradient(
+    53.89% 53.89% at 50% 100%,
+    #73acff 0%,
+    #3e8cff 100%
+  );
   .content {
     width: 50%;
-    background: radial-gradient(
-      53.89% 53.89% at 50% 100%,
-      #73acff 0%,
-      #3e8cff 100%
-    );
-    .content-box {
-      margin-top: calc(30%);
-      margin-bottom: calc(10%);
-      margin-left: 50px;
-      margin-right: 50px;
-      h2 {
-        color: #fff;
-      }
-      p {
-        color: #fff;
-        text-align: justify;
-      }
+    &-box {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+    h2 {
+      color: #fff;
+    }
+    p {
+      color: #fff;
+      text-align: justify;
     }
   }
   &-bg {
@@ -125,6 +124,7 @@
           background-size: cover;
           position: relative;
           .btn-linkedin {
+            font-family: "DM Sans", sans-serif;
             width: 80px;
             height: 33px;
             color: #3d8cff;
@@ -134,7 +134,7 @@
             right: 19px;
             top: 20px;
             text-align: center;
-            line-height: 33px;
+            line-height: 29px;
             transition: all 0.1s ease-in-out;
             &:hover {
               background-color: #3d8cff;
@@ -189,6 +189,10 @@
       justify-content: space-between;
       flex-wrap: wrap;
       .content-block {
+        img {
+          height: 60px;
+          width: 60px;
+        }
         margin-top: 25px;
         width: calc((100% - 20px) / 2);
         p {

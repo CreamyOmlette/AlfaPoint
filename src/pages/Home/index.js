@@ -7,6 +7,10 @@ import supraten from "../../assets/img/clients/supraten.png";
 import exfactor from "../../assets/img/clients/exfactor.png";
 import teleport from "../../assets/img/clients/teleport.png";
 import { ContactForm } from "../../components/contact-form";
+import benefits1 from "../../assets/icons/home-benefits/home-benefits-1.svg";
+import benefits2 from "../../assets/icons/home-benefits/home-benefits-2.svg";
+import benefits3 from "../../assets/icons/home-benefits/home-benefits-3.svg";
+import benefits4 from "../../assets/icons/home-benefits/home-benefits-4.svg";
 
 export function Home() {
   return (
@@ -15,16 +19,18 @@ export function Home() {
       <IconSlider></IconSlider>
       <div className="who-we-are">
         <div className="content">
-          <div className="content-box">
-            <h2>Who are we?</h2>
-            <p>
-              Alfapoint is a modern and ambitious IT company available
-              worldwide, headquartered in Chisinau, the Republic of Moldova, a
-              country well-known for cost-effective offshore and nearshore
-              solutions. Based on our experience within the EU market and highly
-              skillful and dedicated team of experts, we deliver personalized
-              solutions to our customers prior to their needs.
-            </p>
+          <div className="container center-content h-100">
+            <div className="content-box">
+              <h2>Who are we?</h2>
+              <p>
+                Alfapoint is a modern and ambitious IT company available
+                worldwide, headquartered in Chisinau, the Republic of Moldova, a
+                country well-known for cost-effective offshore and nearshore
+                solutions. Based on our experience within the EU market and
+                highly skillful and dedicated team of experts, we deliver
+                personalized solutions to our customers prior to their needs.
+              </p>
+            </div>
           </div>
         </div>
         <div className="who-we-are-bg"></div>
@@ -78,6 +84,7 @@ export function Home() {
           <h2>Benefits of working with us</h2>
           <div className="row">
             <div className="content-block">
+              <img src={benefits1} alt="" />
               <p>COLLABORATE DIRECTLY</p>
               <p>
                 Build your own in-house development team in partnership with us,
@@ -87,6 +94,7 @@ export function Home() {
               </p>
             </div>
             <div className="content-block">
+              <img src={benefits2} alt="" />
               <p>STAY UP TO DATE</p>
               <p>
                 Keep your expectations managed with regular, clear progress
@@ -95,6 +103,7 @@ export function Home() {
               </p>
             </div>
             <div className="content-block">
+              <img src={benefits3} alt="" />
               <p>COMMUNICATE WITH EASE</p>
               <p>
                 Our team is professionally trained to clearly articulate the
@@ -104,6 +113,7 @@ export function Home() {
               </p>
             </div>
             <div className="content-block">
+              <img src={benefits4} alt="" />
               <p>THE CLIENT IN MIND</p>
               <p>
                 Our team is well trained in working remotely, especially as an

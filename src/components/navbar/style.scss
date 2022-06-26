@@ -5,6 +5,47 @@
   margin-right: 50px;
   height: 100%;
 }
+.nav-services {
+  margin-left: 60px;
+  position: relative;
+  &:hover {
+    .nav-services-dropdown {
+      display: block;
+    }
+  }
+  &-link {
+    color: white;
+    &-scroll {
+      color: #3f3f3f;
+    }
+  }
+  &-dropdown {
+    display: none;
+    padding-top: 19.5px;
+    width: 270px;
+    position: absolute;
+    ul {
+      background-color: #fff;
+    }
+    ul > li > a {
+      color: #323232;
+      padding-left: 12px;
+      line-height: 50px;
+      height: 50px;
+      display: block;
+      margin-left: 0;
+    }
+    ul > li + li {
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    ul > li:hover {
+      background-color: $main-color;
+      a {
+        color: white;
+      }
+    }
+  }
+}
 
 .logo {
   &-scroll {
@@ -124,6 +165,7 @@
     justify-content: flex-end;
   }
   .logo {
+    padding-left: 0;
     padding-right: 25px;
     &-scroll {
       padding-right: 0px;

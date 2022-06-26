@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 import "./style.scss";
@@ -37,17 +37,49 @@ export function Navbar() {
             <div className="line"></div>
             <div className="line"></div>
           </div>
-          <Link to="/">
+          <NavLink to="/">
             <div className={`${scroll ? "logo logo-scroll" : "logo"}`}></div>
-          </Link>
+          </NavLink>
           <div
             className={`nav flex align-center hide-md ${
               scroll ? "nav-scroll" : ""
             }`}
           >
-            <Link to="/">about us</Link>
-            <Link to="/services">services</Link>
-            <Link>careers</Link>
+            <NavLink to="/">home</NavLink>
+            <div className="nav-services">
+              <div
+                className={`${
+                  scroll ? "nav-services-link-scroll" : "nav-services-link"
+                }`}
+              >
+                services
+              </div>
+              <div className="nav-services-dropdown">
+                <ul>
+                  <li>
+                    <NavLink to="/services/web-and-mobile-development">
+                      web and mobile development
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/services/digital-products-and-engineering">
+                      digital products & engineering
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="services/outsourcing-extended-teams">
+                      outsourcing / extended teams
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="services/web-and-e-commerce">
+                      web and e-commerce
+                    </NavLink>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <NavLink to="/careers">careers</NavLink>
             <Link
               className={`${scroll ? "contact contact-scroll" : "contact"}`}
             >
@@ -72,21 +104,21 @@ export function Navbar() {
         <ul>
           <div className="separator" key="1"></div>
           <li key="nav-about-us">
-            <Link to="/" onClick={toggleMenu}>
-              <h2>about us</h2>
-            </Link>
+            <NavLink to="/" onClick={toggleMenu}>
+              <h2>home</h2>
+            </NavLink>
           </li>
           <div className="separator" key="2"></div>
           <li key="nav-services">
-            <Link to="/services" onClick={toggleMenu}>
+            <NavLink to="/services" onClick={toggleMenu}>
               <h2>services</h2>
-            </Link>
+            </NavLink>
           </li>
           <div className="separator" key="3"></div>
           <li key="careers">
-            <Link onClick={toggleMenu}>
+            <NavLink to="/careers" onClick={toggleMenu}>
               <h2>careers</h2>
-            </Link>
+            </NavLink>
           </li>
           <div className="separator" key="4"></div>
         </ul>

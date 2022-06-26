@@ -198,13 +198,11 @@ export function ServiceDescriptor() {
                   `service-image-container service-image-container-${activeService.id}`
                 }
               ></div>
-              <h2 className="arrow-down">
-                {activeService && activeService.title}
-              </h2>
+              <h2 className="">{activeService && activeService.title}</h2>
             </div>
           </div>
         </div>
-        <div className={`dropdown ${dropdownActive ? "dropdown-active" : ""}`}>
+        {/* <div className={`dropdown ${dropdownActive ? "dropdown-active" : ""}`}>
           <div className="dropdown-content">
             <div className="container dropdown-content-width">
               {navigation && (
@@ -220,7 +218,7 @@ export function ServiceDescriptor() {
               )}
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="service-content">
         <div className="service-content-text">
