@@ -1,0 +1,45 @@
+@import "../../assets/styles/_variables.scss";
+.vacancies-row {
+  display: flex;
+  align-items: center;
+  small,
+  h4 {
+    width: 22.5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-right: 10px;
+  }
+  a {
+    margin-left: auto;
+    height: 33.3px;
+    padding-left: 25px;
+    padding-right: 25px;
+    line-height: 31.3px;
+    border: 1px solid $main-color;
+    color: $main-color;
+    border-radius: 4px;
+    transition: all 0.1s ease-in-out;
+    &:hover {
+      background-color: $main-color;
+      color: #fff;
+    }
+  }
+}
+.vacancies-separator {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: $breakpoint-md) {
+  .vacancies-row {
+    a {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    small,
+    h4 {
+      width: 25%;
+    }
+  }
+}

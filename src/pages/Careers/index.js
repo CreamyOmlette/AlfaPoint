@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import parse from "html-react-parser";
 import "./style.scss";
+import { Vacancies } from "../../components/vacancies";
 
 export function Careers() {
   const careersData = {
@@ -42,16 +43,17 @@ export function Careers() {
   }, []);
 
   return (
-    <div className="service-descriptor">
-      <div className="navigation">
-        <div className="navigation-front">
-          <div className="container">
-            <div className="service-active" onClick={toggleMenu}>
-              <h2 className="">{careersData.title}</h2>
+    <>
+      <div className="service-descriptor">
+        <div className="navigation">
+          <div className="navigation-front">
+            <div className="container">
+              <div className="service-active" onClick={toggleMenu}>
+                <h2 className="">{careersData.title}</h2>
+              </div>
             </div>
           </div>
-        </div>
-        {/* <div className={`dropdown ${dropdownActive ? "dropdown-active" : ""}`}>
+          {/* <div className={`dropdown ${dropdownActive ? "dropdown-active" : ""}`}>
           <div className="dropdown-content">
             <div className="container dropdown-content-width">
               {navigation && (
@@ -68,30 +70,37 @@ export function Careers() {
             </div>
           </div>
         </div> */}
-      </div>
-      <div className="service-content">
-        <div className="service-content-text">
-          <div className="container content-padding">
-            {careersData && parse(careersData.content)}
-          </div>
         </div>
-        <div
-          className={`service-content-video-container hide-600`}
-          style={{ transform: `translateY(${alpha}px)` }}
-        >
+        <div className="service-content">
+          <div className="service-content-text">
+            <div className="container content-padding">
+              {careersData && parse(careersData.content)}
+            </div>
+          </div>
           <div
-            className={`service-content-video ${
-              scroll ? "service-content-video-bg-reset" : ""
-            }`}
+            className={`service-content-video-container hide-600`}
+            style={{ transform: `translateY(${alpha}px)` }}
           >
-            <div className="service-content-image-container service-content-video-bg">
-              <div className="service-content-image service-content-image-0"></div>
-              <div className="service-content-image service-content-image-1"></div>
-              <div className="service-content-image service-content-image-2"></div>
+            <div
+              className={`service-content-video ${
+                scroll ? "service-content-video-bg-reset" : ""
+              }`}
+            >
+              <div className="service-content-image-container service-content-video-bg">
+                <div className="service-content-image service-content-image-0"></div>
+                <div className="service-content-image service-content-image-1"></div>
+                <div className="service-content-image service-content-image-2"></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+      <div className="vacancies">
+        <div className="vacancies-container">
+          <h2>Vacancies to consider</h2>
+          <Vacancies></Vacancies>
+        </div>
+      </div>
+    </>
   );
 }

@@ -19,7 +19,6 @@ export function Navbar() {
   };
 
   const toggleMenuDropdown = () => {
-    console.log("click");
     setMenuDropdownState(!menuDropdownState);
   };
 
