@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import videoBg from "../../assets/img/video-bg-1.mp4";
 import parse from "html-react-parser";
 import "./style.scss";
@@ -7,7 +7,6 @@ import "./style.scss";
 export function ServiceDescriptor() {
   const { id } = useParams();
   const [activeService, setActiveService] = useState(null);
-  const [navigation, setNavigation] = useState(null);
   const [parsedBenefits, setParsedBenefits] = useState([]);
   useEffect(() => {
     const serviceData = [
@@ -140,13 +139,6 @@ export function ServiceDescriptor() {
       },
     ];
     setActiveService(serviceData.find((service) => service.path === id));
-    setNavigation(
-      serviceData
-        .filter((service) => service.path !== id)
-        .map((e) => {
-          return { title: e.title, path: e.path };
-        })
-    );
   }, [id]);
   useEffect(() => {
     if (activeService == null || activeService.benefits.length === 0) {
