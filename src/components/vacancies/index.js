@@ -30,8 +30,11 @@ export function Vacancies(props) {
             <small className="location">{v.location}</small>
             <small>{v.client}</small>
             <small className="stack">{v.stack}</small>
-            <NavLink className="vacancies-apply" to={`/careers/${v.id}`}>
-              Apply
+            <NavLink
+              className="vacancies-apply dm-sans"
+              to={`/careers/${v.id}`}
+            >
+              apply
             </NavLink>
           </div>
           <div className="vacancies-separator"></div>
