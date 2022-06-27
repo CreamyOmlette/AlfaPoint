@@ -2,8 +2,11 @@ import { useState, useEffect } from "react";
 import parse from "html-react-parser";
 import "./style.scss";
 import { Vacancies } from "../../components/vacancies";
+import { useWidth } from "../../hooks/useWidth";
 
 export function Careers() {
+  const width = useWidth();
+  const [stackVisibility, setStackVisibility] = useState(true);
   const careersData = {
     id: "0",
     title: "Work with us remotely or from office",
@@ -23,30 +26,35 @@ export function Careers() {
       title: "Backend Java Developer - Senior",
       location: "Chisinau, Moldova",
       client: "Germany, EU",
+      stack: "MEAN",
     },
     {
       id: 1,
       title: "Backend Java Developer - Junior",
       location: "Chisinau, Moldova",
       client: "Germany, EU",
+      stack: "MEAN",
     },
     {
       id: 2,
       title: "Backend Java Developer - Middle",
       location: "Chisinau, Moldova",
       client: "Germany, EU",
+      stack: "MEAN",
     },
     {
       id: 3,
       title: "Backend Java Developer - Senior",
       location: "Chisinau, Moldova",
       client: "Germany, EU",
+      stack: "MEAN",
     },
     {
       id: 4,
       title: "Backend Java Developer - Senior",
       location: "Chisinau, Moldova",
       client: "Germany, EU",
+      stack: "MEAN",
     },
   ];
   const [scroll, setScroll] = useState(false);
@@ -73,6 +81,15 @@ export function Careers() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    if (width <= 416) {
+      setStackVisibility(false);
+    } else {
+      setStackVisibility(true);
+    }
+    console.log(stackVisibility);
+  }, [width]);
 
   return (
     <>
@@ -130,7 +147,11 @@ export function Careers() {
       <div className="vacancies">
         <div className="vacancies-container">
           <h2>Vacancies to consider</h2>
-          <Vacancies vacancies={vacancies}></Vacancies>
+          <Vacancies
+            vacancies={vacancies}
+            hideLocation={false}
+            hideStack={stackVisibility}
+          ></Vacancies>
         </div>
       </div>
     </>

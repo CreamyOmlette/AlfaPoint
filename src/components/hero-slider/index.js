@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, A11y, Autoplay } from "swiper";
-import videoBg from "../../assets/img/video-bg.mp4";
+import videoBg from "../../assets/img/video-front-page.mp4";
+import poster from "../../assets/img/poster-front.png";
 import "./style.scss";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -20,7 +21,17 @@ export function HeroSlider() {
         }}
       >
         <SwiperSlide>
-          <video autoPlay muted loop className="video-bg">
+          <video
+            autoPlay
+            muted
+            loop
+            className="video-bg"
+            controlsList="nodownload"
+            preload="yes"
+            poster={poster}
+            disablePictureInPicture
+            playsInline
+          >
             <source src={videoBg} type="video/mp4" />
           </video>
           <div className="video-overlay"></div>

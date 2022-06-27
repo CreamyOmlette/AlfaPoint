@@ -227,7 +227,15 @@ export function ServiceDescriptor() {
               scroll ? "service-content-video-bg-reset" : ""
             }`}
           >
-            <video autoPlay muted loop className="service-content-video-bg">
+            <video
+              className="service-content-video-bg"
+              autoPlay
+              muted
+              loop
+              controlsList="nodownload"
+              preload="yes"
+              playsInline
+            >
               <source src={videoBg} type="video/mp4" />
             </video>
             <div className="service-content-video-overlay"></div>

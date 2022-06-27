@@ -81,12 +81,12 @@ export function Navbar() {
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="services/outsourcing-extended-teams">
+                    <NavLink to="/services/outsourcing-extended-teams">
                       outsourcing / extended teams
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="services/web-and-e-commerce">
+                    <NavLink to="/services/web-and-e-commerce">
                       web and e-commerce
                     </NavLink>
                   </li>

@@ -20,19 +20,7 @@
     }
   }
 }
-@media (hover: none) {
-  .services-slide {
-    background-color: $main-color;
-    .services-slide-icon {
-      background-color: #fff;
-    }
-    .services-slide-content {
-      h3 {
-        color: white;
-      }
-    }
-  }
-}
+
 .services-slide {
   cursor: pointer;
   padding: 25px;
