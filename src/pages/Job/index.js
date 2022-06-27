@@ -3,14 +3,26 @@ import { useParams } from "react-router-dom";
 import parse from "html-react-parser";
 import { Vacancies } from "../../components/vacancies";
 import { ContactForm } from "../../components/contact-form";
+import { useWidth } from "../../hooks/useWidth";
+import { useEffect, useState } from "react";
 
 export function Job() {
+  const width = useWidth();
+  const [stackVisibility, setStackVisibility] = useState(true);
+  useEffect(() => {
+    if (width <= 800) {
+      setStackVisibility(false);
+    } else {
+      setStackVisibility(true);
+    }
+  }, [width]);
   const vacancies = [
     {
       id: 0,
       title: "Backend Java Developer - Senior",
       location: "Chisinau, Moldova",
       client: "Germany, EU",
+      stack: "MEAN",
       content: `<p>We welcome DevOps Engineers to join our amazing team. We are as interested in your work experience as we are in the kind of person you are. At Frakton/Melon we believe there are three key qualities to being a good teammate, as well as client: being smart, delivering results and being nice. This is why beyond your skills, we value character, reason, and sense of humor, and we appreciate the potential for growth. Our team is agile, hard-working, supportive, and friendly and we like to keep it this way. If you would like to join Frakton/Melon, here is what you will do most of the time:
       </p><p>Implementing code and container building automation (Continuous Integration)
       Implementing blue-green or rolling deployment automation (Continuous Deployment)
@@ -42,6 +54,7 @@ export function Job() {
       title: "Backend Java Developer - Junior",
       location: "Chisinau, Moldova",
       client: "Germany, EU",
+      stack: "MEAN",
       content: `<p>We welcome DevOps Engineers to join our amazing team. We are as interested in your work experience as we are in the kind of person you are. At Frakton/Melon we believe there are three key qualities to being a good teammate, as well as client: being smart, delivering results and being nice. This is why beyond your skills, we value character, reason, and sense of humor, and we appreciate the potential for growth. Our team is agile, hard-working, supportive, and friendly and we like to keep it this way. If you would like to join Frakton/Melon, here is what you will do most of the time:
       </p><p>Implementing code and container building automation (Continuous Integration)
       Implementing blue-green or rolling deployment automation (Continuous Deployment)
@@ -73,6 +86,7 @@ export function Job() {
       title: "Backend Java Developer - Middle",
       location: "Chisinau, Moldova",
       client: "Germany, EU",
+      stack: "MEAN",
       content: `<p>We welcome DevOps Engineers to join our amazing team. We are as interested in your work experience as we are in the kind of person you are. At Frakton/Melon we believe there are three key qualities to being a good teammate, as well as client: being smart, delivering results and being nice. This is why beyond your skills, we value character, reason, and sense of humor, and we appreciate the potential for growth. Our team is agile, hard-working, supportive, and friendly and we like to keep it this way. If you would like to join Frakton/Melon, here is what you will do most of the time:
       </p><p>Implementing code and container building automation (Continuous Integration)
       Implementing blue-green or rolling deployment automation (Continuous Deployment)
@@ -104,6 +118,7 @@ export function Job() {
       title: "Backend Java Developer - Senior",
       location: "Chisinau, Moldova",
       client: "Germany, EU",
+      stack: "MEAN",
       content: `<p>We welcome DevOps Engineers to join our amazing team. We are as interested in your work experience as we are in the kind of person you are. At Frakton/Melon we believe there are three key qualities to being a good teammate, as well as client: being smart, delivering results and being nice. This is why beyond your skills, we value character, reason, and sense of humor, and we appreciate the potential for growth. Our team is agile, hard-working, supportive, and friendly and we like to keep it this way. If you would like to join Frakton/Melon, here is what you will do most of the time:
       </p><p>Implementing code and container building automation (Continuous Integration)
       Implementing blue-green or rolling deployment automation (Continuous Deployment)
@@ -135,6 +150,7 @@ export function Job() {
       title: "Backend Java Developer - Senior",
       location: "Chisinau, Moldova",
       client: "Germany, EU",
+      stack: "MEAN",
       content: `<p>We welcome DevOps Engineers to join our amazing team. We are as interested in your work experience as we are in the kind of person you are. At Frakton/Melon we believe there are three key qualities to being a good teammate, as well as client: being smart, delivering results and being nice. This is why beyond your skills, we value character, reason, and sense of humor, and we appreciate the potential for growth. Our team is agile, hard-working, supportive, and friendly and we like to keep it this way. If you would like to join Frakton/Melon, here is what you will do most of the time:
       </p><p>Implementing code and container building automation (Continuous Integration)
       Implementing blue-green or rolling deployment automation (Continuous Deployment)
@@ -180,7 +196,11 @@ export function Job() {
         </div>
         <div className="other-vacancies">
           <h2>Vacancies to consider</h2>
-          <Vacancies vacancies={vacancies}></Vacancies>
+          <Vacancies
+            vacancies={vacancies}
+            hideLocation={true}
+            hideStack={!stackVisibility}
+          ></Vacancies>
         </div>
       </div>
       <ContactForm></ContactForm>

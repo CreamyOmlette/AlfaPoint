@@ -6,7 +6,7 @@ import { useWidth } from "../../hooks/useWidth";
 
 export function Careers() {
   const width = useWidth();
-  const [stackVisibility, setStackVisibility] = useState(true);
+  const [stackVisibility, setStackVisibility] = useState(false);
   const careersData = {
     id: "0",
     title: "Work with us remotely or from office",
@@ -88,7 +88,6 @@ export function Careers() {
     } else {
       setStackVisibility(true);
     }
-    console.log(stackVisibility);
   }, [width]);
 
   return (
@@ -150,7 +149,7 @@ export function Careers() {
           <Vacancies
             vacancies={vacancies}
             hideLocation={false}
-            hideStack={stackVisibility}
+            hideStack={!stackVisibility}
           ></Vacancies>
         </div>
       </div>

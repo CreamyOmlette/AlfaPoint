@@ -23,7 +23,7 @@
   display: flex;
   flex-wrap: wrap;
   .container {
-    width: 50vw;
+    width: 50%;
   }
   &-description {
     padding-top: 25px;
@@ -41,7 +41,7 @@
   padding-top: 25px;
   padding-bottom: 25px;
   padding-right: 50px;
-  width: 50vw;
+  width: 50%;
   h2,
   h4,
   small {
@@ -56,10 +56,10 @@
 @media (max-width: 560px) {
   .job {
     .container {
-      width: 100vw;
+      width: 100%;
     }
   }
   .other-vacancies {
-    width: 100vw;
+    width: 100%;
   }
 }
