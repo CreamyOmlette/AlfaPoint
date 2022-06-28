@@ -1,13 +1,29 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import videoBg from "../../assets/img/video-bg-1.mp4";
 import parse from "html-react-parser";
+import teamsvideo from "../../assets/services/0.mp4";
+import teamsposter from "../../assets/services/0.png";
+import productvideo from "../../assets/services/2.mp4";
+import productposter from "../../assets/services/2.png";
+import devvideo from "../../assets/services/1.mp4";
+import devposter from "../../assets/services/1.png";
+import comvideo from "../../assets/services/1.mp4";
+import composter from "../../assets/services/1.png";
+
 import "./style.scss";
 
 export function ServiceDescriptor() {
+  const storage = [
+    { video: teamsvideo, poster: teamsposter },
+    { video: devvideo, poster: devposter },
+    { video: productvideo, poster: productposter },
+    { video: comvideo, poster: composter },
+  ];
   const { id } = useParams();
   const [activeService, setActiveService] = useState(null);
+  const [forceRefresh, setForceRefresh] = useState(true);
   const [parsedBenefits, setParsedBenefits] = useState([]);
+
   useEffect(() => {
     const serviceData = [
       {
@@ -138,7 +154,14 @@ export function ServiceDescriptor() {
         image: "",
       },
     ];
-    setActiveService(serviceData.find((service) => service.path === id));
+    let s = serviceData.find((service) => service.path === id);
+    setActiveService({
+      ...s,
+      video: storage[parseInt(s.id)].video,
+      poster: storage[parseInt(s.id)].poster,
+    });
+    setForceRefresh(false);
+    setTimeout(() => setForceRefresh(true), 1);
   }, [id]);
   useEffect(() => {
     if (activeService == null || activeService.benefits.length === 0) {
@@ -227,17 +250,19 @@ export function ServiceDescriptor() {
               scroll ? "service-content-video-bg-reset" : ""
             }`}
           >
-            <video
-              className="service-content-video-bg"
-              autoPlay
-              muted
-              loop
-              controlsList="nodownload"
-              preload="yes"
-              playsInline
-            >
-              <source src={videoBg} type="video/mp4" />
-            </video>
+            {activeService && forceRefresh && (
+              <video
+                className="service-content-video-bg"
+                autoPlay
+                muted
+                loop
+                preload="yes"
+                playsInline
+                poster={activeService.poster}
+              >
+                <source src={activeService.video} type="video/mp4" />
+              </video>
+            )}
             <div className="service-content-video-overlay"></div>
           </div>
         </div>
