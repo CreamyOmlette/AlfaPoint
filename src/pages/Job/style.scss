@@ -20,6 +20,9 @@
 }
 
 .job {
+  h1,h2,h3 {
+    color: black;
+  }
   display: flex;
   flex-wrap: wrap;
   .container {

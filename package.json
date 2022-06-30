@@ -2,8 +2,10 @@
   "name": "alphapoint-front",
   "version": "0.1.0",
   "private": true,
-  "peerDependencies": {"react": "^18.1.0",
-    "react-dom": "^18.1.0"},
+  "peerDependencies": {
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^11.2.7",
