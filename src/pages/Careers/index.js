@@ -23,39 +23,33 @@ export function Careers() {
   const vacancies = [
     {
       id: 0,
-      title: "Backend Java Developer - Senior",
+      title: "Senior DevOps Engineer",
       location: "Chisinau, Moldova",
       client: "Germany, EU",
-      stack: "MEAN",
+      stack: "Kubernetes, RabbitMQ, Docker, AWS, Azure, Terraform, Jenkins, Git, Ansible",
     },
     {
       id: 1,
-      title: "Backend Java Developer - Junior",
+      title: "Senior Angular Developer",
       location: "Chisinau, Moldova",
-      client: "Germany, EU",
-      stack: "MEAN",
+      client: "European Union",
+      stack: "Angular, Typescript, HTML5, Javascript, CSS, Node.js, AWS, Azure, Google cloud, NPM, C++",
     },
     {
       id: 2,
-      title: "Backend Java Developer - Middle",
+      title: "Senior Java Developer",
       location: "Chisinau, Moldova",
-      client: "Germany, EU",
-      stack: "MEAN",
+      client: "European Union",
+      stack: "Java, Ajax, REST, Node.js, Angular, MySQL, Git, Jenkins",
     },
     {
       id: 3,
-      title: "Backend Java Developer - Senior",
+      title: "QA Automation (Mid or Senior)",
       location: "Chisinau, Moldova",
-      client: "Germany, EU",
-      stack: "MEAN",
+      client: "Holland, European Union",
+      stack: "avascript, Trello, Jenkins, Git, Python, MySQL, AngularJS",
     },
-    {
-      id: 4,
-      title: "Backend Java Developer - Senior",
-      location: "Chisinau, Moldova",
-      client: "Germany, EU",
-      stack: "MEAN",
-    },
+    
   ];
   const [scroll, setScroll] = useState(false);
   const [alpha, setAlpha] = useState(-200);
