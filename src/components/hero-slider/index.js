@@ -7,6 +7,15 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 export function HeroSlider() {
+  const scrollToContact = (e) => {
+    e.preventDefault();
+    const id = "contact-us";
+    const yOffset = -60;
+    const element = document.getElementById(id);
+    const y =
+      element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  };
   return (
     <div className="slideR-wrapper">
       <Swiper
@@ -46,7 +55,9 @@ export function HeroSlider() {
                 <div className="undertext">
                   <p>Enrich your team's skillset in a blink of an eye</p>
                 </div>
-                <div className="know-us-btn">GET TO KNOW US</div>
+                <div className="know-us-btn" onClick={scrollToContact}>
+                  GET TO KNOW US
+                </div>
               </div>
             </div>
           </div>

@@ -6,7 +6,6 @@ import cvatid from "../../assets/img/clients/cvantid.png";
 import supraten from "../../assets/img/clients/supraten.png";
 import exfactor from "../../assets/img/clients/exfactor.png";
 import teleport from "../../assets/img/clients/teleport.png";
-import { ContactForm } from "../../components/contact-form";
 import benefits1 from "../../assets/icons/home-benefits/home-benefits-1.svg";
 import benefits2 from "../../assets/icons/home-benefits/home-benefits-2.svg";
 import benefits3 from "../../assets/icons/home-benefits/home-benefits-3.svg";
@@ -154,7 +153,6 @@ export function Home() {
           </div>
         </div>
       </aside>
-      <ContactForm></ContactForm>
     </>
   );
 }

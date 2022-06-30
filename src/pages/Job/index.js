@@ -2,7 +2,6 @@ import "./style.scss";
 import { useParams } from "react-router-dom";
 import parse from "html-react-parser";
 import { Vacancies } from "../../components/vacancies";
-import { ContactForm } from "../../components/contact-form";
 import { useWidth } from "../../hooks/useWidth";
 import { useEffect, useState } from "react";
 
@@ -203,7 +202,6 @@ export function Job() {
           ></Vacancies>
         </div>
       </div>
-      <ContactForm></ContactForm>
     </>
   );
 }

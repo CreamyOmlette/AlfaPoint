@@ -16,7 +16,7 @@ export function ContactForm() {
   }, [formState]);
 
   return (
-    <div className="contact-section">
+    <div className="contact-section" id="contact-us">
       <div className="form">
         <h2>We’re here for you</h2>
         <p>Let’s discuss your needs as soon as possible</p>

@@ -4,6 +4,15 @@ import { useEffect } from "react";
 import "./style.scss";
 
 export function Navbar() {
+  const scrollToContact = (e) => {
+    e.preventDefault();
+    const id = "contact-us";
+    const yOffset = -60;
+    const element = document.getElementById(id);
+    const y =
+      element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  };
   const [scroll, setScroll] = useState(false);
   const [menuState, setMenuState] = useState(false);
   const [menuDropdownState, setMenuDropdownState] = useState(false);
@@ -97,6 +106,7 @@ export function Navbar() {
             <Link
               to="/"
               className={`${scroll ? "contact contact-scroll" : "contact"}`}
+              onClick={scrollToContact}
             >
               contact us
             </Link>
@@ -113,7 +123,15 @@ export function Navbar() {
         </div>
         <div className={`contact-menu ${scroll ? "contact-menu-scroll" : ""}`}>
           <div className="contact-menu-btn">
-            <Link to="/">contact us</Link>
+            <Link
+              to="/"
+              onClick={() => {
+                toggleMenu();
+                scrollToContact();
+              }}
+            >
+              contact us
+            </Link>
           </div>
         </div>
         <ul>
