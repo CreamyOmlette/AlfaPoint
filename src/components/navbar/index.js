@@ -6,6 +6,7 @@ import "./style.scss";
 export function Navbar() {
   const scrollToContact = (e) => {
     e.preventDefault();
+    toggleMenu();
     const id = "contact-us";
     const yOffset = -60;
     const element = document.getElementById(id);
@@ -123,13 +124,7 @@ export function Navbar() {
         </div>
         <div className={`contact-menu ${scroll ? "contact-menu-scroll" : ""}`}>
           <div className="contact-menu-btn">
-            <Link
-              to="/"
-              onClick={() => {
-                toggleMenu();
-                scrollToContact();
-              }}
-            >
+            <Link to="/" onClick={scrollToContact}>
               contact us
             </Link>
           </div>
