@@ -185,7 +185,7 @@ export function Navbar() {
                   </li>
                   <li>
                     <NavLink
-                      to="services/outsourcing-extended-teams"
+                      to="/services/outsourcing-extended-teams"
                       onClick={toggleMenu}
                     >
                       <h2>outsourcing / extended teams</h2>
@@ -194,7 +194,7 @@ export function Navbar() {
                   </li>
                   <li>
                     <NavLink
-                      to="services/web-and-e-commerce"
+                      to="/services/web-and-e-commerce"
                       onClick={toggleMenu}
                     >
                       <h2>web and e-commerce</h2>
