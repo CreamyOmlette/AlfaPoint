@@ -62,7 +62,10 @@ export function Footer() {
                 <br />
                 Chisinau, Republic of Moldova
               </p>
-              <a className="highlighted-underline" href="/#">
+              <a
+                className="highlighted-underline"
+                href="https://www.google.com/maps/place/Șoseaua+Muncești+77,+Chișinău+2002/@47.0036724,28.8690045,17z/data=!3m1!4b1!4m5!3m4!1s0x40c97c012b437073:0x4c16c375228d2834!8m2!3d47.0036724!4d28.8690045"
+              >
                 Get locations
               </a>
             </div>
