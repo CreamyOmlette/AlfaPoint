@@ -80,7 +80,7 @@ export function Home() {
                 <div className="function">CTO, Co-founder</div>
               </div>
               <div className="employee">
-                <div className="photo photo-dmitry">
+                <div className="photo photo-dima">
                   <a className="btn-linkedin hide" href="/#">
                     linkedin
                   </a>
