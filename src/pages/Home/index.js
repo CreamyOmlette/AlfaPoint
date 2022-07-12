@@ -72,7 +72,10 @@ export function Home() {
             <div className="featured-employees">
               <div className="employee">
                 <div className="photo photo-vlad">
-                  <a className="btn-linkedin hide" href="/#">
+                  <a
+                    className="btn-linkedin"
+                    href="https://www.linkedin.com/in/vlad-matvei-2b782997/"
+                  >
                     linkedin
                   </a>
                 </div>
@@ -81,7 +84,10 @@ export function Home() {
               </div>
               <div className="employee">
                 <div className="photo photo-dima">
-                  <a className="btn-linkedin hide" href="/#">
+                  <a
+                    className="btn-linkedin"
+                    href="https://www.linkedin.com/in/dumitru-lipceanu-9706b693/"
+                  >
                     linkedin
                   </a>
                 </div>

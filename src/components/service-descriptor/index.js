@@ -65,7 +65,7 @@ export function ServiceDescriptor() {
       comfortable working environment, equipped with the latest
       technologies.
     </p>`,
-          `<p>Flexibility and transparency</p>
+          `<p>FLEXIBILITY AND TRANSPARENCY</p>
     <p>
       You can manage your extended development team members as you see
       fit. There will be no intermediaries between you and your

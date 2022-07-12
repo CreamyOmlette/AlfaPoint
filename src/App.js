@@ -6,6 +6,7 @@ import { Footer } from "./components/footer";
 import { Services } from "./pages/Services";
 import { Careers } from "./pages/Careers";
 import { Job } from "./pages/Job";
+import { CV } from "./pages/CV";
 import { ContactForm } from "./components/contact-form";
 import trackPathForAnalytics from "./hooks/trackPath.ts";
 
@@ -25,16 +26,17 @@ const App = () => {
   }, [analytics]);
   return (
     <>
-      <Navbar />
+      {pathname !== "/cv" && <Navbar />}
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/home/:id" exact component={Home} />
         <Route path="/services/:id" exact component={Services} />
         <Route path="/careers" exact component={Careers} />
         <Route path="/careers/:id" exact component={Job}></Route>
+        <Route path="/cv" exact component={CV}></Route>
       </Switch>
-      <ContactForm />
-      <Footer />
+      {pathname !== "/cv" && <ContactForm />}
+      {pathname !== "/cv" && <Footer />}
     </>
   );
 };
