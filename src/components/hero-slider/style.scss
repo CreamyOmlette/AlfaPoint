@@ -25,12 +25,14 @@
   background-size: cover;
   background-position: 50% 25%;
 }
-@media (max-height: 580px) {
+
+@media (max-height: 550px) and (max-width: $breakpoint-sm) {
   .hero,
   .slide-bg {
     height: 580px;
   }
 }
+
 .hero {
   position: relative;
   z-index: 5;
