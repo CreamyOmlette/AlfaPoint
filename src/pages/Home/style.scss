@@ -118,8 +118,19 @@
       .employee {
         width: calc((100% - 22px) / 2);
         .photo {
+          &-calendar {
+            &-1 {
+              background-image: url("../../assets/icons/calendar-1.svg");
+            }
+            &-2 {
+              background-image: url("../../assets/icons/calendar-2.svg");
+            }
+            background-repeat: no-repeat;
+            background-origin: content-box;
+            aspect-ratio: 335/391 !important;
+          }
           aspect-ratio: 334/502;
-          background-image: url("../../assets/img/employee-1.png");
+          background-color: $main-color;
           &.photo-vlad {
             background-image: url("../../assets/img/employee-vlad.jpg");
           }
@@ -179,7 +190,6 @@
 
 .home-benefits {
   height: max-content;
-  background-color: rgb(200, 207, 207, 0.5);
   .content-box {
     width: 70vw;
     max-width: 690px;
@@ -196,8 +206,11 @@
       flex-wrap: wrap;
       .content-block {
         img {
-          height: 60px;
-          width: 60px;
+          height: 70px;
+          width: 70px;
+          padding: 14px;
+          border-radius: 50%;
+          background-color: #f6f6f6;
         }
         margin-top: 25px;
         width: calc((100% - 20px) / 2);
@@ -229,9 +242,7 @@
 }
 
 .our-partners {
-  border-top: 1px solid rgb(0, 0, 0, 0.1);
   height: max-content;
-  background-color: rgb(200, 207, 207, 0.5);
   .content-box {
     width: 70vw;
     max-width: 690px;
@@ -276,5 +287,18 @@
         }
       }
     }
+  }
+}
+
+.calendar-days {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 0 20%;
+  li {
+    margin: 15px;
+    border-radius: 50%;
+    background-color: grey;
+    background-origin: content-box;
   }
 }

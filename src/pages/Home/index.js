@@ -146,6 +146,21 @@ export function Home() {
           </div>
         </div>
       </section>
+      <div ref={ourTeam} className="our-team">
+        <div className="content">
+          <div className="content-desc">
+            <h2>How fast do we deliver?</h2>
+          </div>
+          <div className="featured-employees">
+            <div className="employee">
+              <div className="photo photo-calendar photo-calendar-1"></div>
+            </div>
+            <div className="employee">
+                <div className="photo photo-calendar photo-calendar-2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
       <aside id="our-partners">
         <div className="our-partners">
           <div className="content-box">
