@@ -211,7 +211,7 @@ export function ServiceDescriptor() {
     <div className="service-descriptor">
       <div className="navigation">
         <div className="navigation-front">
-          <div className="container">
+          <div className="container w-600">
             <div className="service-active" onClick={toggleMenu}>
               <div
                 className={

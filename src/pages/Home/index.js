@@ -12,6 +12,7 @@ import benefits3 from "../../assets/icons/home-benefits/home-benefits-3.svg";
 import benefits4 from "../../assets/icons/home-benefits/home-benefits-4.svg";
 import { useParams } from "react-router-dom";
 import { useEffect, useRef } from "react";
+import { PopupButton } from "react-calendly";
 
 export function Home() {
   const { id } = useParams();
@@ -156,9 +157,15 @@ export function Home() {
               <div className="photo photo-calendar photo-calendar-1"></div>
             </div>
             <div className="employee">
-                <div className="photo photo-calendar photo-calendar-2"></div>
+              <div className="photo photo-calendar photo-calendar-2"></div>
             </div>
           </div>
+          <PopupButton
+            url="https://calendly.com/d-lipceanu/30min"
+            rootElement={document.getElementById("root")}
+            text="Book a call  →"
+            className="book-a-call"
+          />
         </div>
       </div>
       <aside id="our-partners">

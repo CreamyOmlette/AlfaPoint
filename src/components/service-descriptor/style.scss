@@ -1,5 +1,8 @@
 @import "../../assets/styles/_variables.scss";
 
+.container.w-700 {
+  width: 700px;
+}
 .service-descriptor {
   .navigation {
     &-front {
@@ -60,7 +63,7 @@
       width: 100%;
       &-content {
         &-width {
-          width: 600px;
+          width: 700px;
         }
         z-index: 2;
         h2 {
@@ -110,7 +113,7 @@
     }
   }
   &-text {
-    width: 600px;
+    width: 700px;
     height: max-content;
   }
   &-video {
@@ -124,13 +127,13 @@
       &-reset {
         top: 60px;
       }
-      width: calc(100vw - 600px);
+      width: calc(100vw - 700px);
       height: 100vh;
       object-fit: cover;
     }
     &-overlay {
       position: absolute;
-      width: calc(100vw - 600px);
+      width: calc(100vw - 700px);
       height: 100vh;
       top: 0;
       left: 0;
@@ -153,8 +156,8 @@
   }
 }
 
-@media (max-width: 600px) {
-  .hide-600 {
+@media (max-width: 700px) {
+  .hide-700 {
     display: none;
   }
   body .service-descriptor {

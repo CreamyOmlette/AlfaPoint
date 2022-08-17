@@ -60,11 +60,13 @@
   .know-us-btn {
     cursor: pointer;
     display: inline-block;
+    border: none;
     font-size: 14px;
     background-color: $accent-1;
     padding: 10px 40px 10px 40px;
     border-radius: 7px;
     line-height: 30px;
+    background-color: #e2e7e9;
   }
 }
 @media (min-width: $breakpoint-md) {
