@@ -313,7 +313,7 @@ export function ServiceDescriptor() {
         </div>
       </div>
       {activeService && activeService.benefits.length > 0 && (
-        <div className="home-benefits">
+        <div className="home-benefits bg-grey">
           <div className="content-box">
             <h2>Benefits of working with us</h2>
             <div className="row">{parsedBenefits}</div>

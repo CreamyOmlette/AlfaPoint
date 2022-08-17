@@ -1,6 +1,10 @@
 @import "../../assets/styles/_variables.scss";
 .contact-section {
   display: flex;
+  p {
+    margin-top: 25px;
+    margin-bottom: 50px;
+  }
   .form {
     padding-left: 50px;
     padding-right: 50px;
@@ -79,6 +83,7 @@
   .info {
     width: 30vw;
     padding: 50px 50px 50px 50px;
+    background-color: #eeeeee;
     .content-block {
       margin-right: 20px;
     }

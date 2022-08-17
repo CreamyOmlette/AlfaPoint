@@ -71,15 +71,23 @@ export function ContactForm() {
       <div className="info">
         <div className="content-block">
           <h2>General enquiries</h2>
-          <p>Mob: +373 (69) 905 471</p>
-          <p>E-mail: d.lipceanu@alfa-point.com</p>
-          <p>v.matvei@alfa-point.com </p>
+          <p>
+            Mob: +373 (69) 905 471
+            <br />
+            E-mail: d.lipceanu@alfa-point.com
+            <br />
+            v.matvei@alfa-point.com{" "}
+          </p>
         </div>
         <div className="content-block locations">
           <h2>Locations</h2>
-          <p>Sos. Muncesti 77,</p>
-          <p>Chisinau, Republic of Moldova</p>
-          <a href="/#">Get locations</a>
+          <p>
+            Sos. Muncesti 77,
+            <br />
+            Chisinau, Republic of Moldova
+            <br />
+            <a href="/#">Get locations</a>
+          </p>
         </div>
       </div>
     </div>
