@@ -2,6 +2,15 @@ import "./style.scss";
 import { NavLink } from "react-router-dom";
 
 export function Footer() {
+  const scrollToContact = (e) => {
+    e.preventDefault();
+    const id = "contact-us";
+    const yOffset = -60;
+    const element = document.getElementById(id);
+    const y =
+      element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  };
   return (
     <div className="footer">
       <div className="footer-logo-block">
@@ -16,16 +25,23 @@ export function Footer() {
           <div>
             <h4>Social media</h4>
             <div className="footer-list">
-              <a href="/#">Facebook</a>
-              <a href="/#">Instagram</a>
-              <a href="/#">LinkedIn</a>
+              <a href="https://www.linkedin.com/company/alfa-point/">
+                LinkedIn
+              </a>
             </div>
           </div>
           <div>
             <h4>Company</h4>
             <div className="footer-list">
               <NavLink to="/">home</NavLink>
-              <NavLink to="/">contact us</NavLink>
+              <NavLink
+                to="/"
+                onClick={(e) => {
+                  scrollToContact(e);
+                }}
+              >
+                contact us
+              </NavLink>
               <NavLink to="/careers">careers</NavLink>
               <NavLink to="/">our team</NavLink>
             </div>

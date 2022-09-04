@@ -38,8 +38,11 @@ export function Home() {
                   Alfapoint is a modern and ambitious IT company available
                   worldwide, headquartered in Chisinau, the Republic of Moldova,
                   a country well-known for cost-effective offshore and nearshore
-                  solutions. Based on our experience within the EU market and
-                  highly skillful and dedicated team of experts, we deliver
+                  solutions.
+                </p>
+                <p>
+                  Based on our experience within the EU market and highly
+                  skillful and dedicated team of experts, we deliver
                   personalized solutions to our customers prior to their needs.
                 </p>
               </div>

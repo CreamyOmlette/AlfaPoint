@@ -61,7 +61,7 @@ export function HeroSlider() {
               }`}
             >
               <span className="slider-navigation-text">
-                02. TEAM AUGMENTATION
+                02. WEB AND MOBILE DEVELOPMENT
               </span>
             </div>
             <div
@@ -74,7 +74,7 @@ export function HeroSlider() {
               }`}
             >
               <span className="slider-navigation-text">
-                03. TEAM AUGMENTATION
+                03. DIGITAL PRODUCTS AND ENGINEERING
               </span>
             </div>
           </div>
@@ -85,6 +85,7 @@ export function HeroSlider() {
           slidesPerView={1}
           navigation={{ draggable: true }}
           onSwiper={(mySwiper) => setSwiper(mySwiper)}
+          onSlideChange={(swiper) => setSlide(swiper.activeIndex)}
         >
           <SwiperSlide>
             <div className="slide-bg get-to-know">

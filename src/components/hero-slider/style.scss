@@ -26,10 +26,12 @@
   background-position: 50% 25%;
 }
 
-@media (max-height: 550px) and (max-width: $breakpoint-sm) {
+@media (max-height: 550px) and (max-width: $breakpoint-md) {
   .hero,
-  .slide-bg {
-    height: 580px;
+  .slide-bg,
+  .slideR-wrapper,
+  .video-bg {
+    height: 750px;
   }
 }
 
@@ -71,7 +73,7 @@
 @media (min-width: $breakpoint-md) {
   .hero {
     .padding-lg {
-      padding-left: 20%;
+      padding-left: 50px;
     }
   }
 }
@@ -166,4 +168,8 @@
     right: 25px;
     bottom: 25px;
   }
+}
+
+.slideR-wrapper {
+  position: relative;
 }
