@@ -91,3 +91,37 @@
 .icon-slide {
   height: calc((100% - 30px) / 2) !important;
 }
+
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+.slider-wrapper {
+  position: relative;
+}
+.slider-wrapper:before {
+  position: absolute;
+  height: 100%;
+  width: 150px;
+  content: "";
+  left: 0;
+  z-index: 3;
+  background: linear-gradient(
+    to right,
+    rgb(255, 255, 255),
+    rgba(255, 255, 255, 0)
+  );
+}
+.slider-wrapper:after {
+  z-index: 3;
+  position: absolute;
+  height: 100%;
+  width: 100px;
+  content: "";
+  right: 0;
+  top: 0;
+  background: linear-gradient(
+    to left,
+    rgb(255, 255, 255),
+    rgba(255, 255, 255, 0)
+  );
+}

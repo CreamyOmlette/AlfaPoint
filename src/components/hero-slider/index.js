@@ -6,8 +6,11 @@ import "./style.scss";
 import "swiper/css";
 import "swiper/css/pagination";
 import { PopupButton } from "react-calendly";
+import { useState } from "react";
 
 export function HeroSlider() {
+  const [swiper, setSwiper] = useState(null);
+  const [slide, setSlide] = useState(0);
   // const scrollToContact = (e) => {
   //   e.preventDefault();
   //   const id = "contact-us";
@@ -18,55 +21,146 @@ export function HeroSlider() {
   //   window.scrollTo({ top: y, behavior: "smooth" });
   // };
   return (
-    <div className="slideR-wrapper">
-      <Swiper
-        modules={[Pagination, A11y, Autoplay]}
-        spaceBetween={0}
-        slidesPerView={1}
-        pagination={{ clickable: true, dynamicBullets: true }}
-        navigation={{ draggable: true }}
-        autoplay={{
-          delay: 10000,
-          disableOnInteraction: false,
-        }}
+    <>
+      <video
+        autoPlay
+        muted
+        loop
+        className="video-bg"
+        controlsList="nodownload"
+        preload="yes"
+        poster={poster}
+        disablePictureInPicture
+        playsInline
       >
-        <SwiperSlide>
-          <video
-            autoPlay
-            muted
-            loop
-            className="video-bg"
-            controlsList="nodownload"
-            preload="yes"
-            poster={poster}
-            disablePictureInPicture
-            playsInline
-          >
-            <source src={videoBg} type="video/mp4" />
-          </video>
-          <div className="video-overlay"></div>
-          <div className="slide-bg get-to-know">
-            <div className="hero">
-              <div className="container padding-lg">
-                <div className="heading">
-                  <h1>
-                    We help companies <br /> in outstaffing their IT operations
-                  </h1>
-                </div>
-                <div className="undertext">
-                  <p>Enrich your team's skillset in a blink of an eye</p>
-                </div>
-                <PopupButton
-                  url="https://calendly.com/d-lipceanu/30min"
-                  rootElement={document.getElementById("root")}
-                  text="BOOK A CALL"
-                  className="know-us-btn"
-                />
-              </div>
+        <source src={videoBg} type="video/mp4" />
+      </video>
+      <div className="slideR-wrapper">
+        {swiper && (
+          <div className="slider-navigation">
+            <div
+              onClick={() => {
+                swiper.slideTo(0);
+                setSlide(0);
+              }}
+              className={`slider-navigation-button ${
+                slide === 0 ? "slider-navigation-button-active" : ""
+              }`}
+            >
+              <span className="slider-navigation-text">
+                01. TEAM AUGMENTATION
+              </span>
+            </div>
+            <div
+              onClick={() => {
+                swiper.slideTo(1);
+                setSlide(1);
+              }}
+              className={`slider-navigation-button ${
+                slide === 1 ? "slider-navigation-button-active" : ""
+              }`}
+            >
+              <span className="slider-navigation-text">
+                02. TEAM AUGMENTATION
+              </span>
+            </div>
+            <div
+              onClick={() => {
+                swiper.slideTo(2);
+                setSlide(2);
+              }}
+              className={`slider-navigation-button ${
+                slide === 2 ? "slider-navigation-button-active" : ""
+              }`}
+            >
+              <span className="slider-navigation-text">
+                03. TEAM AUGMENTATION
+              </span>
             </div>
           </div>
-        </SwiperSlide>
-      </Swiper>
-    </div>
+        )}
+        <Swiper
+          modules={[Pagination, A11y, Autoplay]}
+          spaceBetween={0}
+          slidesPerView={1}
+          navigation={{ draggable: true }}
+          onSwiper={(mySwiper) => setSwiper(mySwiper)}
+        >
+          <SwiperSlide>
+            <div className="slide-bg get-to-know">
+              <div className="hero">
+                <div className="container padding-lg">
+                  <div className="heading">
+                    <h1>
+                      Cost-efficient solutions in oustaffing IT operations
+                    </h1>
+                  </div>
+                  <div className="undertext">
+                    <p>
+                      Extend your teams in a blink of an eye.
+                      <br /> Full control, transparent payments and flexible
+                      conditions.
+                    </p>
+                  </div>
+                  <PopupButton
+                    url="https://calendly.com/d-lipceanu/30min"
+                    rootElement={document.getElementById("root")}
+                    text="BOOK A CALL"
+                    className="know-us-btn"
+                  />
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="slide-bg get-to-know">
+              <div className="hero">
+                <div className="container padding-lg">
+                  <div className="heading">
+                    <h1>Crafting digital products that are built to last</h1>
+                  </div>
+                  <div className="undertext">
+                    <p>
+                      Our team of experts delivers everything from idea to
+                      design & engineering. <br /> We can turn any idea sketched
+                      on the back of a napkin into a final, shipped product.
+                    </p>
+                  </div>
+                  <PopupButton
+                    url="https://calendly.com/d-lipceanu/30min"
+                    rootElement={document.getElementById("root")}
+                    text="BOOK A CALL"
+                    className="know-us-btn"
+                  />
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="slide-bg get-to-know">
+              <div className="hero">
+                <div className="container padding-lg">
+                  <div className="heading">
+                    <h1>Build a reliable and scalable solution with us</h1>
+                  </div>
+                  <div className="undertext">
+                    <p>
+                      The building, connecting, and scaling of digital platforms
+                      for enterprises is one of our core expertise.
+                    </p>
+                  </div>
+                  <PopupButton
+                    url="https://calendly.com/d-lipceanu/30min"
+                    rootElement={document.getElementById("root")}
+                    text="BOOK A CALL"
+                    className="know-us-btn"
+                  />
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      </div>
+    </>
   );
 }

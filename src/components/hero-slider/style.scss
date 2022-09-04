@@ -20,7 +20,7 @@
 }
 .slide-bg {
   height: 100vh;
-  background-color: #c8cfcf;
+  background-color: rgba(61, 139, 255, 0.8);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 25%;
@@ -42,7 +42,6 @@
   display: flex;
   align-items: flex-end;
   .heading {
-    margin-bottom: 44px;
     h1 {
       display: inline-block;
       margin-right: 25px;
@@ -55,7 +54,7 @@
       display: inline-block;
       padding-right: 25px;
     }
-    margin-bottom: 44px;
+    margin-bottom: 50px;
   }
   .know-us-btn {
     cursor: pointer;
@@ -74,19 +73,14 @@
     .padding-lg {
       padding-left: 20%;
     }
-    .heading {
-      margin-bottom: 25px;
-    }
   }
 }
 @media (max-width: $breakpoint-md) {
-  .heading,
-  .undertext,
   .know-us-btn {
     margin-bottom: 30px;
   }
   .hero {
-    padding-bottom: 25px;
+    padding-bottom: 75px;
   }
 }
 @media (max-height: 390px) and (orientation: landscape) {
@@ -98,7 +92,6 @@
 }
 @media (max-width: $breakpoint-md) and (orientation: landscape) {
   .slide-bg {
-    background-image: url("../../assets/img/slide-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 25%;
@@ -107,8 +100,7 @@
     .undertext {
       margin-bottom: 25px;
     }
-    .know-us-btn,
-    .heading {
+    .know-us-btn {
       margin-bottom: 0px;
     }
   }
@@ -120,34 +112,58 @@
     box-sizing: border-box;
   }
   .hero {
-    .heading,
     .undertext {
       margin-bottom: 25px;
     }
   }
 }
 
-.slideR-wrapper {
-  :global(.swiper-pagination-bullet) {
-    background: white;
-    width: 1rem;
-    height: 1rem;
-    border-radius: 0.5rem;
-    opacity: 1;
+.slider-navigation {
+  position: absolute;
+  z-index: 4;
+  bottom: 50px;
+  right: 50px;
+  display: flex;
+  gap: 20px;
+  &-text {
+    width: max-content;
+    overflow: hidden;
   }
-
-  :global(.swiper-pagination-bullet-active) {
-    background-color: white;
-    width: 5rem;
-    height: 1rem;
-    border-radius: 0.5rem;
+  &-button {
+    &-active {
+      color: $main-color;
+      background-color: white;
+      padding-left: 10px;
+      padding-right: 10px;
+      line-height: 27px;
+      max-width: 400px;
+      background-image: none;
+    }
+    cursor: pointer;
+    background-image: url("../../assets/icons/selector.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 18px;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 173px;
+    color: transparent;
+    transition: all 0.3s linear;
+  }
+  @keyframes nav-change {
+    0% {
+      max-width: 18px;
+      border-radius: 50%;
+    }
+    100% {
+      max-width: 400px;
+      border-radius: 173px;
+    }
   }
 }
-
-#root
-  > div
-  > div.swiper.swiper-initialized.swiper-horizontal.swiper-pointer-events
-  > div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal.swiper-pagination-bullets-dynamic
-  > span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-bullet-active-main {
-  background-color: white;
+@media (max-width: $breakpoint-md) {
+  .slider-navigation {
+    right: 25px;
+    bottom: 25px;
+  }
 }

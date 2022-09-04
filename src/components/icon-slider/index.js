@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, A11y, Grid, Autoplay } from "swiper";
+import { FreeMode, Navigation, A11y, Grid, Autoplay } from "swiper";
 import "./style.scss";
 import "swiper/scss";
+import "swiper/css/free-mode";
 import "swiper/scss/grid";
 
 export function IconSlider() {
@@ -55,16 +56,20 @@ export function IconSlider() {
   return (
     <div className="slider-wrapper">
       <Swiper
-        modules={[A11y, Navigation, Grid, Autoplay]}
+        modules={[A11y, Navigation, Grid, Autoplay, FreeMode]}
         spaceBetween={5}
         slidesPerView={slidesPerView}
         navigation={{ draggable: true }}
         grid={{ rows: 1 }}
         className="icon-slider"
-        autoplay={{ delay: 5000 }}
+        autoplay={{ delay: 0, disableOnInteraction: true }}
+        speed={4000}
+        freeMode={true}
+        loop={true}
         breakpoints={{
           200: {
             grid: { rows: 2 },
+            loop: false,
           },
           800: {
             grid: { rows: 2 },
