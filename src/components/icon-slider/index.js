@@ -16,7 +16,7 @@ export function IconSlider() {
     width: window.innerWidth,
     height: window.innerHeight,
   });
-  const [slidesPerView, setSlidesPerView] = useState(8);
+  const [slidesPerView, setSlidesPerView] = useState(12);
   useEffect(() => {
     const detectSize = () => {
       detectHW({
@@ -24,14 +24,20 @@ export function IconSlider() {
         height: window.innerHeight,
       });
     };
-    if (windowDimension.width <= sm) {
+    if (windowDimension.width <= 300) {
       setSlidesPerView(3);
       setRow(2);
-    } else if (windowDimension.width <= mid) {
+    } else if (windowDimension.width <= sm) {
       setSlidesPerView(4);
       setRow(2);
-    } else if (windowDimension.width <= lg) {
+    } else if (windowDimension.width <= 700) {
+      setSlidesPerView(5);
+      setRow(2);
+    } else if (windowDimension.width <= mid) {
       setSlidesPerView(6);
+      setRow(2);
+    } else if (windowDimension.width <= lg) {
+      setSlidesPerView(8);
       setRow(1);
     }
     window.addEventListener("resize", detectSize);
