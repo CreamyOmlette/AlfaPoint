@@ -43,7 +43,8 @@
   .hero,
   .slide-bg,
   .slideR-wrapper,
-  .video-bg {
+  .video-bg,
+  .video-overlay {
     height: 750px;
   }
 }
@@ -71,6 +72,7 @@
     margin-bottom: 50px;
   }
   .know-us-btn {
+    color: black;
     cursor: pointer;
     display: inline-block;
     border: none;
