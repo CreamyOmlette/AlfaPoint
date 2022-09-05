@@ -36,6 +36,7 @@ export function HeroSlider() {
       >
         <source src={videoBg} type="video/mp4" />
       </video>
+      <div className="video-overlay"></div>
       <div className="slideR-wrapper">
         {swiper && (
           <div className="slider-navigation">
