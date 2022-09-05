@@ -1,5 +1,35 @@
 @import "../../assets/styles/_variables";
 
+#merits {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #f4f4f4;
+}
+
+.merits {
+  gap: 50px;
+  flex: auto;
+}
+
+.merit {
+  min-width: 250px;
+  padding-left: 100px;
+  &-1 {
+    background-image: url("../../assets/icons/merit-1.svg");
+  }
+  &-2 {
+    background-image: url("../../assets/icons/merit-2.svg");
+  }
+  &-3 {
+    background-image: url("../../assets/icons/merit-3.svg");
+  }
+
+  background-repeat: no-repeat;
+  background-position: left top;
+  h3 {
+    color: black;
+  }
+}
 .book-a-call {
   background: none;
   border: none;
@@ -275,6 +305,9 @@
   }
 }
 @media (max-width: $breakpoint-md) {
+  .merits {
+    flex-wrap: wrap;
+  }
   .our-partners {
     height: max-content;
     padding-bottom: 50px;

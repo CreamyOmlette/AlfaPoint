@@ -9,6 +9,7 @@ import devvideo from "../../assets/services/1.mp4";
 import devposter from "../../assets/services/1.png";
 import comvideo from "../../assets/services/3.mp4";
 import composter from "../../assets/services/3.png";
+import { PopupButton } from "react-calendly";
 
 import "./style.scss";
 
@@ -317,6 +318,29 @@ export function ServiceDescriptor() {
           <div className="content-box">
             <h2>Benefits of working with us</h2>
             <div className="row">{parsedBenefits}</div>
+          </div>
+        </div>
+      )}
+      {activeService?.id === '0' && (
+        <div className="our-team how-fast">
+          <div className="content">
+            <div className="content-desc">
+              <h2>How fast do we deliver?</h2>
+            </div>
+            <div className="featured-employees">
+              <div className="employee">
+                <div className="photo photo-calendar photo-calendar-1"></div>
+              </div>
+              <div className="employee">
+                <div className="photo photo-calendar photo-calendar-2"></div>
+              </div>
+            </div>
+            <PopupButton
+              url="https://calendly.com/d-lipceanu/30min"
+              rootElement={document.getElementById("root")}
+              text="Book a call  →"
+              className="book-a-call"
+            />
           </div>
         </div>
       )}

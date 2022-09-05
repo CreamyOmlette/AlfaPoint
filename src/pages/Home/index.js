@@ -12,7 +12,6 @@ import benefits3 from "../../assets/icons/home-benefits/home-benefits-3.svg";
 import benefits4 from "../../assets/icons/home-benefits/home-benefits-4.svg";
 import { useParams } from "react-router-dom";
 import { useEffect, useRef } from "react";
-import { PopupButton } from "react-calendly";
 
 export function Home() {
   const { id } = useParams();
@@ -26,6 +25,33 @@ export function Home() {
     <>
       <section id="hero">
         <HeroSlider></HeroSlider>
+      </section>
+      <section id="merits">
+        <div className="flex container merits">
+          <div className="merit merit-1">
+            <h3>Transparency in processes</h3>
+            <p>
+              Our processes are fully transparent and Client has access to all
+              aspects of the product development at any stage.
+            </p>
+          </div>
+          <div className="merit merit-2">
+            <h3>Flexible resource management</h3>
+            <p>
+              We realize things change quickly so you'll only need to provide
+              several weeks of notice to cancel or change a Contract at any
+              time.
+            </p>
+          </div>
+          <div className="merit merit-3">
+            <h3>Customer satisfaction</h3>
+            <p>
+              We have a proven 90% Client retention rate after the first
+              project. We provide cost-efficient, scalable and reliable
+              solutions.
+            </p>
+          </div>
+        </div>
       </section>
       <IconSlider></IconSlider>
       <section id="who-we-are">
@@ -150,27 +176,6 @@ export function Home() {
           </div>
         </div>
       </section>
-      <div ref={ourTeam} className="our-team">
-        <div className="content">
-          <div className="content-desc">
-            <h2>How fast do we deliver?</h2>
-          </div>
-          <div className="featured-employees">
-            <div className="employee">
-              <div className="photo photo-calendar photo-calendar-1"></div>
-            </div>
-            <div className="employee">
-              <div className="photo photo-calendar photo-calendar-2"></div>
-            </div>
-          </div>
-          <PopupButton
-            url="https://calendly.com/d-lipceanu/30min"
-            rootElement={document.getElementById("root")}
-            text="Book a call  →"
-            className="book-a-call"
-          />
-        </div>
-      </div>
       <aside id="our-partners">
         <div className="our-partners">
           <div className="content-box">
