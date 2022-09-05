@@ -59,20 +59,18 @@ export function IconSlider() {
         modules={[A11y, Navigation, Grid, Autoplay, FreeMode]}
         spaceBetween={5}
         slidesPerView={slidesPerView}
-        navigation={{ draggable: true }}
         grid={{ rows: 1 }}
         className="icon-slider"
-        autoplay={{ delay: 0, disableOnInteraction: true }}
-        speed={4000}
-        freeMode={true}
+        autoplay={{ delay: 100, disableOnInteraction: true }}
+        speed={3000}
         loop={true}
+        freeMode={true}
         breakpoints={{
           200: {
-            grid: { rows: 2 },
-            loop: false,
+            grid: { rows: 1 },
           },
           800: {
-            grid: { rows: 2 },
+            grid: { rows: 1 },
           },
           950: {
             grid: { rows: 1 },

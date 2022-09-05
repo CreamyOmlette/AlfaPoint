@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { PopupButton } from "react-calendly";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 export function HeroSlider() {
   const [swiper, setSwiper] = useState(null);
@@ -109,6 +110,11 @@ export function HeroSlider() {
                     text="BOOK A CALL"
                     className="know-us-btn"
                   />
+                  <div className="more-info">
+                    <NavLink to="/services/outsourcing-extended-teams">
+                      MORE INFO
+                    </NavLink>
+                  </div>
                 </div>
               </div>
             </div>
@@ -133,6 +139,11 @@ export function HeroSlider() {
                     text="BOOK A CALL"
                     className="know-us-btn"
                   />
+                  <div className="more-info">
+                    <NavLink to="/services/web-and-mobile-development">
+                      MORE INFO
+                    </NavLink>
+                  </div>
                 </div>
               </div>
             </div>
@@ -156,6 +167,11 @@ export function HeroSlider() {
                     text="BOOK A CALL"
                     className="know-us-btn"
                   />
+                  <div className="more-info">
+                    <NavLink to="/services/digital-products-and-engineering">
+                      MORE INFO
+                    </NavLink>
+                  </div>
                 </div>
               </div>
             </div>

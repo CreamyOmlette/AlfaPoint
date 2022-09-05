@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "sass": "^1.52.3",
-    "swiper": "^8.2.4"
+    "swiper": "^8.3.2"
   },
   "proxy": "http://localhost:5000"
 }
