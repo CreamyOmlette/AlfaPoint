@@ -72,23 +72,47 @@ export function ContactForm() {
         <div className="content-block">
           <h2>General enquiries</h2>
           <p>
-            Mob: +373 (69) 905 471
+            <b>EU, US, Canada and Australia</b>
             <br />
-            E-mail: d.lipceanu@alfa-point.com
+            d.lipceanu@alfa-point.com
             <br />
             v.matvei@alfa-point.com{" "}
+            <br />
+            Mob: +373 (69) 905 471
+            <br />
+            <br />
+            <b>MENA</b>
+            <br />
+            m.elobeid@alfa-point.com
+            <br />
+            Mob: +966 532850775
+            <br />
           </p>
         </div>
-        <div className="content-block locations">
+        {/* <div className="content-block locations">
           <h2>Locations</h2>
           <p>
-            Sos. Muncesti 77,
+            <b>Republic of Moldova</b>
             <br />
-            Chisinau, Republic of Moldova
+            Chisinau, sos. Muncesti 77
+            <br />
+            <a href="https://goo.gl/maps/37MTn1x7A3waPqLq6">Get locations</a>
+          </p>
+          <p>
+            <b>Romania</b>
+            <br />
+            mun. Bucuresti, Sector 1, str. Barbu Lautaru nr. 2
+            <br />
+            <a href="https://goo.gl/maps/D2Vm81JL5iFT8b3BA">Get locations</a>
+          </p>
+          <p>
+            <b>Riyadh, Saudi Arabia</b>
+            
             <br />
             <a href="/#">Get locations</a>
           </p>
-        </div>
+        </div> */}
+        
       </div>
     </div>
   );

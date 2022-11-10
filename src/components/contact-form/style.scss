@@ -8,10 +8,12 @@
   .form {
     padding-left: 50px;
     padding-right: 50px;
-    padding-top: 50px;
-    padding-bottom: 50px;
     width: 70vw;
     background-color: #3d8cff;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 50px;
     p {
       margin-bottom: 40px;
       color: white;
