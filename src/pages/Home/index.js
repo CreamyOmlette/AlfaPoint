@@ -61,7 +61,7 @@ export function Home() {
               <div className="content-box">
                 <h2>Who are we?</h2>
                 <p>
-                Alfapoint is a European software development headquartered in Bucharest, Romania. We provide VC-backed startups and fast-growing tech companies with dedicated engineering teams, delivering scalable products that users love.
+                Alfapoint is a European software development company headquartered in Bucharest, Romania. We provide VC-backed startups and fast-growing tech companies with dedicated engineering teams, delivering scalable products that users love.
                 </p>
                 <p>
                   Based on our experience within the EU market and highly
